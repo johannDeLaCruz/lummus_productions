@@ -34,7 +34,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" color="background">
+    <AppBar position="sticky" color="background">
       <Container maxWidth="xl">
         <Toolbar
           disableGutters
@@ -47,7 +47,7 @@ function ResponsiveAppBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color="primary"
             >
               <MenuIcon />
             </IconButton>
@@ -76,7 +76,11 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <Logo sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <Logo
+            sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
+            height={60}
+            logoColor="purple"
+          />
           <Box
             sx={{
               display: { xs: "none", md: "flex", gap: "1.5rem", flexGrow: 1 },
