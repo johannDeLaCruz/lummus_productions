@@ -8,8 +8,8 @@ import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
 import Avatar from "@mui/material/Avatar";
 
-const Testimonials = () => {
-  const testimonialsList = [
+const items = () => {
+  const testimonialsItems = [
     {
       rating: <Rating value={5} readOnly />,
       description:
@@ -37,7 +37,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <Box sx={{ backgroundColor: "primary.main"}} component={"section"} py={10}>
+    <Box sx={{ backgroundColor: "primary.main" }} component={"section"} py={10}>
       <Container maxWidth="xl">
         <Stack alignItems={"center"} spacing={6} paddingBlock={4}>
           <Typography>Ouça o que os nossos clientes têm a dizer!</Typography>
@@ -46,16 +46,16 @@ const Testimonials = () => {
           </Typography>
         </Stack>
         <Stack direction={"row"} spacing={6}>
-          {testimonialsList.map((testimonial, index) => (
+          {testimonialsItems.map((item, index) => (
             <Card key={index} sx={{ p: 4 }}>
               <CardContent>
-                {testimonial.rating}
-                <Typography>{testimonial.description}</Typography>
+                {item.rating}
+                <Typography>{item.description}</Typography>
               </CardContent>
               <CardHeader
-                avatar={testimonial.avatar}
-                title={testimonial.title}
-                subheader={testimonial.subtitle}
+                avatar={item.avatar}
+                title={item.title}
+                subheader={item.subtitle}
               />
             </Card>
           ))}
@@ -65,4 +65,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default items;
