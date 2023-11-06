@@ -8,19 +8,23 @@ import Portfolio from "./components/Portfolio";
 import Milestones from "./components/Milestones";
 import Bio from "./components/Bio";
 import Testimonials from "./components/Testimonials";
+import CallToAction from "./components/CallToAction";
 
 function App() {
   return (
     <>
       <NavBar />
-      <HeroSection />
-      {/* <HeroVideo /> */}
-      <AboutUs />
-      <Services />
-      <Portfolio />
-      <Milestones />
-      <Bio />
-      <Testimonials />
+      <main>
+        <HeroSection />
+        {/* <HeroVideo /> */}
+        <AboutUs />
+        <Services />
+        <Portfolio />
+        <Milestones />
+        <Bio />
+        <Testimonials />
+        <CallToAction />
+      </main>
     </>
   );
 }
