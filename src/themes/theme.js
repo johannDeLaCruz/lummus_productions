@@ -11,7 +11,7 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: "Montserrat",
-    // fontSize: 16,
+    fontSize: 16,
   },
   breakpoints: {
     values: {

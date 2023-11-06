@@ -70,7 +70,9 @@ const Services = () => {
                   sx={{
                     display: "flex",
                     flexDirection: "column",
+                    paddingInline: 0
                   }}
+              
                 />
                 <CardContent
                   sx={{ display: "flex", justifyContent: "center", p: 0 }}
