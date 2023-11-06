@@ -9,6 +9,7 @@ import Milestones from "./components/Milestones";
 import Bio from "./components/Bio";
 import Testimonials from "./components/Testimonials";
 import CallToAction from "./components/CallToAction";
+import ContactUs from "./components/ContactUs";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Bio />
         <Testimonials />
         <CallToAction />
+        <ContactUs />
       </main>
     </>
   );

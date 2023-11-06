@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 
 function CallToAction() {
   return (
-    <Box p={16}>
+    <Box py={16} component={"section"}>
       <Container maxWidth={"xl"}>
         <Stack alignItems={"center"}>
           <Typography>Eleve o seu negócio para outro nível</Typography>

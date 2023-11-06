@@ -37,8 +37,8 @@ const Testimonials = () => {
   ];
 
   return (
-    <Box sx={{ backgroundColor: "primary.main", py: 10 }}>
-      <Container maxWidth="lg">
+    <Box sx={{ backgroundColor: "primary.main"}} component={"section"} py={10}>
+      <Container maxWidth="xl">
         <Stack alignItems={"center"} spacing={6} paddingBlock={4}>
           <Typography>Ouça o que os nossos clientes têm a dizer!</Typography>
           <Typography>
