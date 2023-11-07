@@ -18,11 +18,11 @@ const Footer = () => {
   return (
     <Box component={"footer"}>
       <Container maxWidth={"xl"}>
-        <Stack direction={"row"} px={4} py={8} spacing={4}>
+        <Stack direction={"row"} px={6} py={8} spacing={4}>
           <Stack alignItems={"flex-start"} spacing={2}>
             <LogoComplete height={100}/>
             <Typography>
-              © 2021 Lummus Productions. All rights reserved.
+              © 2023 Lummus Productions. All rights reserved.
             </Typography>
           </Stack>
           <Grid container p={4}>
