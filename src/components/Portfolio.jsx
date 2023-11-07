@@ -8,8 +8,8 @@ const Portfolio = () => {
     <Box component={"section"} py={8}>
       <Container maxWidth={"xl"}>
         <Stack spacing={4} alignItems={"center"}>
-          <Typography>Conheça o nosso trabalho</Typography>
-          <Typography>
+          <Typography variant="h2">Conheça o nosso trabalho</Typography>
+          <Typography variant="body2">
             We&lsquo;ve helped numerous clients achieve their advertising goals.
             Read what they have to say about us!
           </Typography>

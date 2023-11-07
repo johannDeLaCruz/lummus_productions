@@ -10,18 +10,19 @@ const AboutUs = () => {
         <Stack
           direction={"row"}
           justifyContent={"center"}
-          spacing={8}
+          spacing={12}
           alignItems={"center"}
         >
-          <Box>
-            <Typography>Conheça a Lummus!</Typography>
-            <Typography width={"40ch"}>
+          <Stack spacing={4}>
+            <Typography variant="h2">Conheça a Lummus!</Typography>
+            <Typography width={"40ch"} variant="body2">
               As a new client, you can get started with Lummus Productions
               without understanding the technical details. Once you&lsquo;ve
               contacted us, our team will guide you through the process of
               creating effective advertising campaigns tailored to your needs.
             </Typography>
-          </Box>
+          </Stack>
+
           <img src="/src/assets/about_us_img.png" alt="about-us-img" />
         </Stack>
       </Container>

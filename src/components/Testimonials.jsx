@@ -37,25 +37,39 @@ const items = () => {
   ];
 
   return (
-    <Box sx={{ backgroundColor: "primary.main" }} component={"section"} py={10}>
+    <Box
+      sx={{ backgroundColor: "primary.main", color: "primary.contrastText" }}
+      component={"section"}
+      py={10}
+    >
       <Container maxWidth="xl">
-        <Stack alignItems={"center"} spacing={6} paddingBlock={4}>
-          <Typography>Ouça o que os nossos clientes têm a dizer!</Typography>
-          <Typography>
+        <Stack alignItems={"center"} spacing={6} py={8}>
+          <Typography variant="h2">
+            Ouça o que os nossos clientes têm a dizer!
+          </Typography>
+          <Typography variant="body2">
             Check out what our satisfied clients have to say about our services.
           </Typography>
         </Stack>
-        <Stack direction={"row"} spacing={6}>
+        <Stack direction={"row"} spacing={6} px={4} justifyContent={"center"}>
           {testimonialsItems.map((item, index) => (
-            <Card key={index} sx={{ p: 4 }}>
+            <Card key={index} sx={{ p: 2 }}>
               <CardContent>
                 {item.rating}
-                <Typography>{item.description}</Typography>
+                <Typography variant="body2" width={"16ch"} height={"12ch"}>
+                  {item.description}
+                </Typography>
               </CardContent>
               <CardHeader
                 avatar={item.avatar}
                 title={item.title}
+                titleTypographyProps={{
+                  variant: "button",
+                  component: "h3",
+                  textTransform: "none",
+                }}
                 subheader={item.subtitle}
+                subheaderTypographyProps={{ variant: "subtitle1" }}
               />
             </Card>
           ))}

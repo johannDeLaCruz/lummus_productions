@@ -7,9 +7,11 @@ function CallToAction() {
   return (
     <Box py={16} component={"section"}>
       <Container maxWidth={"xl"}>
-        <Stack alignItems={"center"}>
-          <Typography>Eleve o seu negócio para outro nível</Typography>
-          <Typography>
+        <Stack alignItems={"center"} spacing={4}>
+          <Typography variant="h2">
+            Eleve o seu negócio para outro nível
+          </Typography>
+          <Typography variant="body2">
             Encontre os nossos experts e eleve a sua marca
           </Typography>
         </Stack>

@@ -24,30 +24,42 @@ const theme = createTheme({
     },
     h2: {
       fontFamily: "'Hagrid'",
-      fontSize: "2.25rem",
+      fontSize: "3rem",
       fontWeight: 700,
     },
     h3: {
-      fontFamily: "'Hagrid'",
-      fontSize: "1.5rem",
-      fontWeight: 700,
-    },
-    body1: {
-      fontFamily: "Bree Serif",
+      fontFamily: "Montserrat",
       fontSize: "1.5rem",
       fontWeight: 400,
+    },
+    h4: {
+      fontFamily: "Montserrat",
+      fontSize: "3.25rem",
+      fontWeight: 400,
+      lineHeight: 1.3,
+      letterSpacing: "-0.2rem",
+    },
+    body1: {
+      fontFamily: "Montserrat",
+      fontSize: "1.5rem",
+      fontWeight: 300,
       lineHeight: 1.3,
     },
     body2: {
-      fontFamily: "Bree Serif",
+      fontFamily: "Montserrat",
       fontSize: "1.25rem",
-      fontWeight: 400,
+      fontWeight: 300,
       lineHeight: 1.3,
     },
     button: {
       fontFamily: "Bree Serif",
       fontSize: "1rem",
       fontWeight: 400,
+    },
+    subtitle1: {
+      fontFamily: "Montserrat",
+      fontSize: "0.875rem",
+      fontWeight: 300,
     },
   },
   components: {

@@ -10,28 +10,29 @@ import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
 import Container from "@mui/material/Container";
+import Icon from "./Icon";
 
 const Services = () => {
   const services = [
     {
-      icon: <AccessibilityIcon />,
+      icon: AccessibilityIcon,
       title: "Marketing Digital",
       description:
         "Responsible for developing and implementing effective marketing strategies.",
     },
     {
-      icon: <Diversity3Icon />,
+      icon: Diversity3Icon,
       title: "Mídias Sociais",
       description:
         "Analyzes data to uncover insights and optimize advertising campaigns.",
     },
     {
-      icon: <PaletteIcon />,
+      icon: PaletteIcon,
       title: "Gestão de Tráfego",
       description: "Manages client accounts and ensures their satisfaction.",
     },
     {
-      icon: <CameraAltIcon />,
+      icon: CameraAltIcon,
       title: "Vídeos Publicitários",
       description:
         "Identifies opportunities for business growth and develops strategies to capitalize on them.",
@@ -44,45 +45,50 @@ const Services = () => {
       pt={14}
       pb={10}
     >
-      <Container
-        maxWidth={"xl"}
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <Stack alignItems={"center"}>
-          <Typography variant="h6" py={4}>
-            Nossos Serviços
-          </Typography>
-          <Typography variant="p" py={4}>
+      <Container maxWidth={"xl"}>
+        <Stack
+          spacing={6}
+          alignItems={"center"}
+          sx={{ color: "primary.contrastText" }}
+          py={7}
+        >
+          <Typography variant="h2">Nossos Serviços</Typography>
+          <Typography variant="body1">
             A Lummus tem o que você precisa!
           </Typography>
         </Stack>
-        <Grid container spacing={4} px={4}>
+        <Grid container spacing={4} px={8}>
           {services.map((service, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}>
               <Card sx={{ padding: 2 }}>
                 <CardHeader
-                  avatar={<Box color={"primary.main"}>{service.icon}</Box>}
+                  avatar={
+                    <Box color={"primary.main"}>
+                      <Icon icon={service.icon} size={40} />
+                    </Box>
+                  }
                   title={service.title}
+                  titleTypographyProps={{
+                    variant: "h3",
+                  }}
                   sx={{
                     display: "flex",
                     flexDirection: "column",
-                    paddingInline: 0
+                    paddingInline: 0,
+                    gap: 2,
+                    ".MuiCardHeader-avatar": {
+                      margin: 0,
+                    },
                   }}
-              
                 />
                 <CardContent
                   sx={{ display: "flex", justifyContent: "center", p: 0 }}
                 >
                   <Typography
                     variant="body2"
-                    color="textSecondary"
-                    component="p"
-                    height={"8ch"}
-                    width={"21ch"}
+                    align="center"
+                    height={"9ch"}
+                    width={"15ch"}
                   >
                     {service.description}
                   </Typography>

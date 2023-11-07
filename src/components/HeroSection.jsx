@@ -10,32 +10,32 @@ const HeroSection = () => {
       component={"section"}
       sx={{
         backgroundColor: "primary.main",
+        color: "primary.contrastText",
       }}
       pt={14}
       pb={10}
     >
-      <Container
-        maxWidth={"xl"}
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Stack direction={"row"}>
-          <Typography
-            variant="h1"
-            sx={{ display: "flex", alignItems: "center" }}
-          >
-            Unleash Your Creativity With
+      <Container maxWidth={"xl"}>
+        <Stack
+          direction={"column"}
+          spacing={3}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
+          <Stack direction={"row"} spacing={1}>
+            <Typography
+              variant="h1"
+              sx={{ display: "flex", alignItems: "center" }}
+            >
+              Unleash Your Creativity With
+            </Typography>
+            <Logo height={120} logoColor="white" />
+          </Stack>
+          <Typography variant="body1" sx={{ width: "30ch" }} align="center">
+            We&lsquo;re passionate about helping you grow your business. As a
+            new client, you can get started with Lummus.
           </Typography>
-          <Logo height={120} logoColor="white" />
         </Stack>
-        <Typography variant="body1" paragraph sx={{ width: "40ch" }}>
-          We&lsquo;re passionate about helping you grow your business. As a new
-          client, you can get started with Lummus.
-        </Typography>
       </Container>
     </Box>
   );

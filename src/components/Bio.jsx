@@ -17,7 +17,7 @@ const Bio = () => {
           justifyContent={"space-between"}
           px={12}
         >
-          <Typography>
+          <Typography variant="h2" width={"6ch"}>
             Let&lsquo;s create something amazing together!
           </Typography>
           <Card sx={{ padding: 3 }}>
