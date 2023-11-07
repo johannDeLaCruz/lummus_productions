@@ -25,15 +25,14 @@ const HeroSection = () => {
       >
         <Stack direction={"row"}>
           <Typography
-            variant="h3"
-            component={"h1"}
+            variant="h1"
             sx={{ display: "flex", alignItems: "center" }}
           >
             Unleash Your Creativity With
           </Typography>
           <Logo height={120} logoColor="white" />
         </Stack>
-        <Typography variant="body" paragraph sx={{ width: "40ch" }}>
+        <Typography variant="body1" paragraph sx={{ width: "40ch" }}>
           We&lsquo;re passionate about helping you grow your business. As a new
           client, you can get started with Lummus.
         </Typography>

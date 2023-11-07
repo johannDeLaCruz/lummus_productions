@@ -32,17 +32,34 @@ const theme = createTheme({
       fontSize: "1.5rem",
       fontWeight: 700,
     },
+    body1: {
+      fontFamily: "Bree Serif",
+      fontSize: "1.5rem",
+      fontWeight: 400,
+      lineHeight: 1.3,
+    },
+    body2: {
+      fontFamily: "Bree Serif",
+      fontSize: "1.25rem",
+      fontWeight: 400,
+      lineHeight: 1.3,
+    },
+    button: {
+      fontFamily: "Bree Serif",
+      fontSize: "1rem",
+      fontWeight: 400,
+    },
   },
   components: {
     MuiTypography: {
       defaultProps: {
         variantMapping: {
-          h1: "h2",
+          h1: "h1",
           h2: "h2",
-          h3: "h2",
-          h4: "h2",
-          h5: "h2",
-          h6: "h2",
+          h3: "h3",
+          h4: "h4",
+          h5: "h5",
+          h6: "h6",
           subtitle1: "h2",
           subtitle2: "h2",
           body1: "p",
