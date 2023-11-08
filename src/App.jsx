@@ -1,7 +1,7 @@
 import NavBar from "./components/NavBar";
 import HeroSection from "./components/HeroSection";
 import Services from "./components/Services";
-// import HeroVideo from "./components/HeroVideo";
+import HeroVideo from "./components/HeroVideo";
 import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
 import Portfolio from "./components/Portfolio";
@@ -17,7 +17,7 @@ function App() {
       <NavBar />
       <main>
         <HeroSection />
-        {/* <HeroVideo /> */}
+        <HeroVideo />
         <AboutUs />
         <Services />
         <Portfolio />

@@ -1,66 +1,33 @@
-import { PropTypes } from "prop-types";
-import { useRef, useEffect } from "react";
-// import { useTheme } from '@mui/material/styles';
-import { Container, Video } from "@mui/material";
+import { useState, useEffect } from "react";
+import ReactPlayer from "react-player";
+import { useInView } from "react-intersection-observer";
 
-const VideoComponent = ({ src }) => {
-  //   const theme = useTheme();
-  const videoRef = useRef(null);
+const VideoPlayer = () => {
+  const [isInView, setIsInView] = useState(false);
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.5, // When 50% of the video is in view
+  });
 
   useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.5,
-    };
-
-    const handleIntersection = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          videoRef.current.play();
-        } else {
-          videoRef.current.pause();
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(handleIntersection, options);
-    observer.observe(videoRef.current);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+    if (inView) {
+      setIsInView(true);
+    }
+  }, [inView]);
 
   return (
-    <Container
-      sx={{
-        width: "100%",
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Video
-        ref={videoRef}
-        loop
-        muted
-        sx={{
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-        }}
-      >
-        <source src={src} type="video/mp4" />
-        Your browser does not support the video tag.
-      </Video>
-    </Container>
+    <div ref={ref}>
+      {isInView && (
+        <ReactPlayer
+          url="https://drive.google.com/file/d/1-fxUZ7EyvkNehCQG8A3uxnYJsZvd1zJz"
+          controls
+          width="100%"
+          height="100%"
+          playing={true} // Autoplay when in view
+        />
+      )}
+    </div>
   );
 };
 
-export default VideoComponent;
-
-VideoComponent.propTypes = {
-  src: PropTypes.string.isRequired,
-};
+export default VideoPlayer;

@@ -94,8 +94,6 @@ function ResponsiveAppBar() {
                 sx={{
                   my: 2,
                   display: "block",
-                  textTransform: "none",
-                  fontWeight: "semibold",
                 }}
                 variant="text"
                 size="medium"

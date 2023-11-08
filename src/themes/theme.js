@@ -11,7 +11,7 @@ const theme = createTheme({
       contrastText: "#ffffff",
     },
     grey: {
-      50: "#fafafa",
+      50: "#F0F0F0",
     },
   },
   typography: {
@@ -21,16 +21,19 @@ const theme = createTheme({
       fontFamily: "'Hagrid'",
       fontSize: "3.75rem",
       fontWeight: 700,
+      lineHeight: 1.3,
     },
     h2: {
       fontFamily: "'Hagrid'",
       fontSize: "3rem",
       fontWeight: 700,
+      lineHeight: 1.3,
     },
     h3: {
       fontFamily: "Montserrat",
       fontSize: "1.5rem",
       fontWeight: 400,
+      lineHeight: 1.3,
     },
     h4: {
       fontFamily: "Montserrat",
@@ -55,12 +58,18 @@ const theme = createTheme({
       fontFamily: "Bree Serif",
       fontSize: "1rem",
       fontWeight: 400,
+      textTransform: "none"
     },
     subtitle1: {
       fontFamily: "Montserrat",
       fontSize: "0.875rem",
       fontWeight: 300,
     },
+    caption: {
+      fontFamily: "Montserrat",
+      fontSize: "1rem",
+      fontWeight: 300,
+    }
   },
   components: {
     MuiTypography: {

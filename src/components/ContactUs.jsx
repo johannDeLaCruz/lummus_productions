@@ -11,6 +11,15 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import TelegramIcon from "@mui/icons-material/Telegram";
+import Icon from "./Icon";
+
+const contactUsIcons = [
+  EmailIcon,
+  WhatsAppIcon,
+  InstagramIcon,
+  TwitterIcon,
+  TelegramIcon,
+];
 
 const ContactUs = () => {
   return (
@@ -26,33 +35,37 @@ const ContactUs = () => {
         maxWidth={"xl"}
         sx={{ display: "flex", justifyContent: "center" }}
       >
-        <Card sx={{ display: "flex", alignItems: "center" }}>
-          <CardContent sx={{ padding: 8 }}>
-            <Typography>Começe já a sua jornada criativa!</Typography>
-            <Typography>Unleash the power of modern advertising.</Typography>
-            <Stack direction={"row"} spacing={1} color={"primary.main"}>
-              <IconButton color="inherit">
-                <EmailIcon />
-              </IconButton>
-              <IconButton color="inherit">
-                <WhatsAppIcon />
-              </IconButton>
-              <IconButton color="inherit">
-                <InstagramIcon />
-              </IconButton>
-              <IconButton color="inherit">
-                <TwitterIcon />
-              </IconButton>
-              <IconButton color="inherit">
-                <TelegramIcon />
-              </IconButton>
+        <Card
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            backgroundColor: "grey.50",
+          }}
+        >
+          <CardContent sx={{ padding: 6 }}>
+            <Stack spacing={4}>
+              <Typography variant="h2" width={"8ch"}>
+                Começe já a sua jornada criativa!
+              </Typography>
+              <Typography variant="body2">
+                Unleash the power of modern advertising.
+              </Typography>
+              <Stack direction={"row"} spacing={1}>
+                {contactUsIcons.map((icon, index) => (
+                  <IconButton key={index}>
+                    <Icon icon={icon} size={60} color={"primary"} />
+                  </IconButton>
+                ))}
+              </Stack>
             </Stack>
           </CardContent>
           <CardMedia
             component="img"
             alt="contact-us-image"
             image="/src/assets/contact_us_img.png"
-            sx={{ width: "34rem" }}
+            sx={{
+              width: "34rem",
+            }}
           ></CardMedia>
         </Card>
       </Container>
