@@ -16,7 +16,7 @@ const VideoPlayer = () => {
   }, [inView]);
 
   return (
-    <div ref={ref}>
+    <div ref={ref}> 
       {isInView && (
         <ReactPlayer
           url="https://drive.google.com/file/d/1-fxUZ7EyvkNehCQG8A3uxnYJsZvd1zJz"
