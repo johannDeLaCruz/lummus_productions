@@ -103,7 +103,7 @@ function ResponsiveAppBar() {
             ))}
           </Box>
           <Box
-            sx={{ display: "flex", justifyContent: "center", paddingBlock: 1 }}
+            sx={{ display: "flex", justifyContent: "center", py: 2 }}
           >
             <Paper sx={{ paddingInline: 1 }} elevation={3}>
               <IconButton color="primary">
