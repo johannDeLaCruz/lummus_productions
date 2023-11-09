@@ -58,7 +58,7 @@ const theme = createTheme({
       fontFamily: "Bree Serif",
       fontSize: "1rem",
       fontWeight: 400,
-      textTransform: "none"
+      textTransform: "none",
     },
     subtitle1: {
       fontFamily: "Montserrat",
@@ -69,7 +69,8 @@ const theme = createTheme({
       fontFamily: "Montserrat",
       fontSize: "1rem",
       fontWeight: 300,
-    }
+      lineHeight: 1.4,
+    },
   },
   components: {
     MuiTypography: {
@@ -85,6 +86,7 @@ const theme = createTheme({
           subtitle2: "h2",
           body1: "p",
           body2: "p",
+          
         },
       },
     },
