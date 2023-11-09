@@ -105,7 +105,7 @@ function ResponsiveAppBar() {
           <Box
             sx={{ display: "flex", justifyContent: "center", py: 2 }}
           >
-            <Paper sx={{ paddingInline: 1 }} elevation={3}>
+            <Paper sx={{ paddingInline: 1 }} >
               <IconButton color="primary">
                 <WhatsAppIcon fontSize="large" />
               </IconButton>
