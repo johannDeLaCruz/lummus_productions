@@ -49,14 +49,14 @@ const Milestones = () => {
                       variant: "h4",
                       component: "span",
                       align: "center",
-                      noWrap: "true",
+                      noWrap: true,
                     }}
                     secondary={milestone.description}
                     secondaryTypographyProps={{
                       variant: "body1",
                       color: "primary.contrastText",
                       align: "center",
-                      noWrap: "true",
+                      noWrap: true,
                     }}
                   />
                 </ListItem>
