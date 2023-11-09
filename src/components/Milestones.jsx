@@ -31,7 +31,13 @@ const Milestones = () => {
       <Container maxWidth={"xl"}>
         <Stack spacing={8} alignItems={"center"}>
           <Typography variant="h2">Nossas Conquistas</Typography>
-          <List sx={{ display: "flex", flexDirection: "row", gap: 18 }}>
+          <List
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              gap: 18,
+            }}
+          >
             {milestonesList.map((milestone, index) => (
               <ListItem key={index} disablePadding>
                 <ListItemText

@@ -26,7 +26,7 @@ const Footer = () => {
               © 2023 Lummus Productions. All rights reserved.
             </Typography>
           </Stack>
-          <Grid container p={6} spacing={1}>
+          <Grid container px={6} spacing={1}>
             {footerItems.map((item, index) => (
               <Grid item xs={12} sm={6} key={index}>
                 <Button variant="text">{item}</Button>

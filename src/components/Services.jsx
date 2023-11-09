@@ -47,14 +47,14 @@ const Services = () => {
     >
       <Container maxWidth={"xl"}>
         <Stack
-          spacing={6}
+          spacing={4}
           alignItems={"center"}
           sx={{ color: "primary.contrastText" }}
           py={7}
         >
           <Typography variant="h2">Nossos Serviços</Typography>
           <Typography variant="body1">
-            A Lummus tem o que você precisa!
+            A Lummus tem tudo o que você precisa!
           </Typography>
         </Stack>
         <Grid container spacing={4} px={8}>

@@ -3,12 +3,10 @@ import Stack from "@mui/material/Stack";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Rating from "@mui/material/Rating";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardHeader from "@mui/material/CardHeader";
 import Avatar from "@mui/material/Avatar";
+import TestimonialCard from "./TestimonialCard";
 
-const items = () => {
+const Testimonials = () => {
   const testimonialsItems = [
     {
       rating: <Rating value={5} readOnly />,
@@ -40,10 +38,10 @@ const items = () => {
     <Box
       sx={{ backgroundColor: "primary.main", color: "primary.contrastText" }}
       component={"section"}
-      py={10}
+      pt={8}
     >
       <Container maxWidth="xl">
-        <Stack alignItems={"center"} spacing={6} py={8}>
+        <Stack alignItems={"center"} spacing={6} pt={8}>
           <Typography variant="h2">
             Ouça o que os nossos clientes têm a dizer!
           </Typography>
@@ -53,25 +51,15 @@ const items = () => {
         </Stack>
         <Stack direction={"row"} spacing={6} px={4} justifyContent={"center"}>
           {testimonialsItems.map((item, index) => (
-            <Card key={index} sx={{ p: 2 }}>
-              <CardContent>
-                {item.rating}
-                <Typography variant="body2" width={"16ch"} height={"12ch"}>
-                  {item.description}
-                </Typography>
-              </CardContent>
-              <CardHeader
-                avatar={item.avatar}
-                title={item.title}
-                titleTypographyProps={{
-                  variant: "button",
-                  component: "h3",
-                  textTransform: "none",
-                }}
-                subheader={item.subtitle}
-                subheaderTypographyProps={{ variant: "subtitle1" }}
-              />
-            </Card>
+            <TestimonialCard
+              key={index}
+              {...item}
+              sx={{
+                position: "relative",
+                p: 4,
+                transform: `translateY(${index % 2 === 0 ? "30%" : "50%"})`,
+              }}
+            />
           ))}
         </Stack>
       </Container>
@@ -79,4 +67,4 @@ const items = () => {
   );
 };
 
-export default items;
+export default Testimonials;

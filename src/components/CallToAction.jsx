@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 
 function CallToAction() {
   return (
-    <Box py={16} component={"section"}>
+    <Box pb={14} pt={30} component={"section"}>
       <Container maxWidth={"xl"}>
         <Stack alignItems={"center"} spacing={4}>
           <Typography variant="h2">
