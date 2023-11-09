@@ -11,6 +11,7 @@ import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
 import Container from "@mui/material/Container";
 import Icon from "./Icon";
+import LampImg from "./LampImg";
 
 const Services = () => {
   const services = [
@@ -39,23 +40,21 @@ const Services = () => {
     },
   ];
   return (
-    <Box
-      sx={{ backgroundColor: "primary.main" }}
-      component={"section"}
-      pt={14}
-      pb={10}
-    >
+    <Box sx={{ backgroundColor: "primary.main" }} component={"section"} pb={10}>
       <Container maxWidth={"xl"}>
-        <Stack
-          spacing={4}
-          alignItems={"center"}
-          sx={{ color: "primary.contrastText" }}
-          py={7}
-        >
-          <Typography variant="h2">Nossos Serviços</Typography>
-          <Typography variant="body1">
-            A Lummus tem tudo o que você precisa!
-          </Typography>
+        <Stack spacing={0} alignItems={"center"}>
+          <LampImg height={200} />
+          <Stack
+            spacing={4}
+            alignItems={"center"}
+            sx={{ color: "primary.contrastText" }}
+            pb={7}
+          >
+            <Typography variant="h2">Nossos Serviços</Typography>
+            <Typography variant="body1">
+              A Lummus tem tudo o que você precisa!
+            </Typography>
+          </Stack>
         </Stack>
         <Grid container spacing={4} px={8}>
           {services.map((service, index) => (

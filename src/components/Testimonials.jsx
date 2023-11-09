@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import Rating from "@mui/material/Rating";
 import Avatar from "@mui/material/Avatar";
 import TestimonialCard from "./TestimonialCard";
+import LampImg from "./LampImg";
 
 const Testimonials = () => {
   const testimonialsItems = [
@@ -38,16 +39,19 @@ const Testimonials = () => {
     <Box
       sx={{ backgroundColor: "primary.main", color: "primary.contrastText" }}
       component={"section"}
-      pt={8}
     >
       <Container maxWidth="xl">
-        <Stack alignItems={"center"} spacing={6} pt={8}>
-          <Typography variant="h2">
-            Ouça o que os nossos clientes têm a dizer!
-          </Typography>
-          <Typography variant="body2">
-            Check out what our satisfied clients have to say about our services.
-          </Typography>
+        <Stack spacing={0} alignItems={"center"}>
+          <LampImg height={200} />
+          <Stack alignItems={"center"} spacing={6} >
+            <Typography variant="h2">
+              Ouça o que os nossos clientes têm a dizer!
+            </Typography>
+            <Typography variant="body2">
+              Check out what our satisfied clients have to say about our
+              services.
+            </Typography>
+          </Stack>
         </Stack>
         <Stack direction={"row"} spacing={6} px={4} justifyContent={"center"}>
           {testimonialsItems.map((item, index) => (

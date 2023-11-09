@@ -12,6 +12,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import Icon from "./Icon";
+import LampImg from "./LampImg";
 
 const contactUsIcons = [
   EmailIcon,
@@ -27,47 +28,49 @@ const ContactUs = () => {
       sx={{
         backgroundColor: "primary.main",
       }}
-      py={10}
-      //   px={8}
+      pb={10}
       component={"section"}
     >
       <Container
         maxWidth={"xl"}
         sx={{ display: "flex", justifyContent: "center" }}
       >
-        <Card
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            backgroundColor: "grey.50",
-          }}
-        >
-          <CardContent sx={{ padding: 6 }}>
-            <Stack spacing={4}>
-              <Typography variant="h2" width={"8ch"}>
-                Começe já a sua jornada criativa!
-              </Typography>
-              <Typography variant="body2">
-                Unleash the power of modern advertising.
-              </Typography>
-              <Stack direction={"row"} spacing={1}>
-                {contactUsIcons.map((icon, index) => (
-                  <IconButton key={index}>
-                    <Icon icon={icon} size={60} color={"primary"} />
-                  </IconButton>
-                ))}
-              </Stack>
-            </Stack>
-          </CardContent>
-          <CardMedia
-            component="img"
-            alt="contact-us-image"
-            image="/src/assets/contact_us_img.png"
+        <Stack spacing={2} alignItems={"center"}>
+          <LampImg />
+          <Card
             sx={{
-              width: "34rem",
+              display: "flex",
+              alignItems: "center",
+              backgroundColor: "grey.50",
             }}
-          ></CardMedia>
-        </Card>
+          >
+            <CardContent sx={{ padding: 6 }}>
+              <Stack spacing={4}>
+                <Typography variant="h2" width={"8ch"}>
+                  Começe já a sua jornada criativa!
+                </Typography>
+                <Typography variant="body2">
+                  Unleash the power of modern advertising.
+                </Typography>
+                <Stack direction={"row"} spacing={1}>
+                  {contactUsIcons.map((icon, index) => (
+                    <IconButton key={index}>
+                      <Icon icon={icon} size={60} color={"primary"} />
+                    </IconButton>
+                  ))}
+                </Stack>
+              </Stack>
+            </CardContent>
+            <CardMedia
+              component="img"
+              alt="contact-us-image"
+              image="/src/assets/contact_us_img.png"
+              sx={{
+                width: "34rem",
+              }}
+            ></CardMedia>
+          </Card>
+        </Stack>
       </Container>
     </Box>
   );
