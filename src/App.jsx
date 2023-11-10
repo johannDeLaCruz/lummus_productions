@@ -1,15 +1,17 @@
 import NavBar from "./components/NavBar";
 import HeroSection from "./components/HeroSection";
-import Services from "./components/Services";
 import HeroVideo from "./components/HeroVideo";
-import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
-import Portfolio from "./components/Portfolio";
-import Milestones from "./components/Milestones";
-import Bio from "./components/Bio";
-import Testimonials from "./components/Testimonials";
-import CallToAction from "./components/CallToAction";
-import ContactUs from "./components/ContactUs";
+import Services from "./components/Services";
+
+// import Footer from "./components/Footer";
+
+// import Portfolio from "./components/Portfolio";
+// import Milestones from "./components/Milestones";
+// import Bio from "./components/Bio";
+// import Testimonials from "./components/Testimonials";
+// import CallToAction from "./components/CallToAction";
+// import ContactUs from "./components/ContactUs";
 
 function App() {
   return (
@@ -20,14 +22,14 @@ function App() {
         <HeroVideo />
         <AboutUs />
         <Services />
-        <Portfolio />
-        <Milestones />
-        <Bio />
-        <Testimonials />
-        <CallToAction />
-        <ContactUs />
+        {/* <Portfolio /> */}
+        {/* <Milestones /> */}
+        {/* <Bio /> */}
+        {/* <Testimonials /> */}
+        {/* <CallToAction /> */}
+        {/* <ContactUs /> */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

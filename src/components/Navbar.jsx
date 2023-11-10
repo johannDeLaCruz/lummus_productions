@@ -40,7 +40,7 @@ function ResponsiveAppBar() {
           disableGutters
           sx={{ display: "flex", justifyContent: "space-between" }}
         >
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
+          <Box sx={{ display: { xxs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -66,7 +66,7 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" },
+                display: { xxs: "block", md: "none" },
               }}
             >
               {pages.map((page) => (
@@ -77,13 +77,13 @@ function ResponsiveAppBar() {
             </Menu>
           </Box>
           <Logo
-            sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
+            sx={{ display: { xxs: "flex", md: "none" }, mr: 1 }}
             height={60}
             logoColor="purple"
           />
           <Box
             sx={{
-              display: { xs: "none", md: "flex", gap: "1.5rem", flexGrow: 1 },
+              display: { xxs: "none", md: "flex", gap: "1.5rem", flexGrow: 1 },
             }}
             px={6}
           >
@@ -103,9 +103,14 @@ function ResponsiveAppBar() {
             ))}
           </Box>
           <Box
-            sx={{ display: "flex", justifyContent: "center", py: 2 }}
+            sx={{
+              display: { sm: "flex", xxs: "none" },
+              justifyContent: "center",
+              py: 2,
+            }}
           >
-            <Paper sx={{ paddingInline: 1 }} >
+            {" "}
+            <Paper sx={{ paddingInline: 1 }}>
               <IconButton color="primary">
                 <WhatsAppIcon fontSize="large" />
               </IconButton>

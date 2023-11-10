@@ -50,15 +50,22 @@ const Services = () => {
             sx={{ color: "primary.contrastText" }}
             pb={7}
           >
-            <Typography variant="h2">Nossos Serviços</Typography>
-            <Typography variant="body1">
+            <Typography variant="h2" textAlign={"center"}>
+              Nossos Serviços
+            </Typography>
+            <Typography variant="body1" textAlign={"center"}>
               A Lummus tem tudo o que você precisa!
             </Typography>
           </Stack>
         </Stack>
-        <Grid container spacing={4} px={8}>
+        <Grid
+          container
+          spacing={4}
+          justifyContent={"center"}
+          sx={{ px: { xs: 2, sm: 0, md: 8, lg: 0 } }}
+        >
           {services.map((service, index) => (
-            <Grid item xs={12} sm={6} md={3} key={index}>
+            <Grid item xs={12} sm={6} lg={3} key={index}>
               <Card sx={{ padding: 2 }}>
                 <CardHeader
                   avatar={
@@ -69,6 +76,7 @@ const Services = () => {
                   title={service.title}
                   titleTypographyProps={{
                     variant: "h3",
+                    align: "center",
                   }}
                   sx={{
                     display: "flex",

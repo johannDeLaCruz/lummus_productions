@@ -19,7 +19,7 @@ const VideoPlayer = () => {
     <div ref={ref}> 
       {isInView && (
         <ReactPlayer
-          url="https://drive.google.com/file/d/1-fxUZ7EyvkNehCQG8A3uxnYJsZvd1zJz"
+          url="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
           controls
           width="100%"
           height="100%"
