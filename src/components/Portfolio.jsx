@@ -11,7 +11,7 @@ const Portfolio = () => {
       <Container maxWidth={"xl"}>
       <Stack spacing={0} alignItems={"center"}>
         <LampImg height={200} color="purple"/>
-          <Stack spacing={4} alignItems={"center"}>
+          <Stack spacing={4} textAlign={"center"}>
             <Typography variant="h2">Conheça o nosso trabalho</Typography>
             <Typography variant="body2">
               We&lsquo;ve helped numerous clients achieve their advertising goals.

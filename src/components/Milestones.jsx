@@ -30,15 +30,18 @@ const Milestones = () => {
       pb={12}
     >
       <Container maxWidth={"xl"}>
-        <Stack spacing={0} alignItems={"start"} px={12}>
+        <Stack spacing={0} alignItems={{ xxs: "center", md: "start" }} px={12}>
           <LampImg height={200} />
           <Stack spacing={4} alignItems={"center"} alignSelf={"center"}>
-            <Typography variant="h2">Nossas Conquistas</Typography>
+            <Typography variant="h2" textAlign={"center"}>
+              Nossas Conquistas
+            </Typography>
             <List
               sx={{
                 display: "flex",
-                flexDirection: "row",
-                gap: 12,
+                flexDirection: { xxs: "column", md: "row" },
+                columnGap: 12,
+                rowGap: 6,
               }}
             >
               {milestonesList.map((milestone, index) => (

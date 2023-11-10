@@ -19,14 +19,31 @@ const Footer = () => {
   return (
     <Box component={"footer"}>
       <Container maxWidth={"xl"}>
-        <Stack direction={"row"} px={16} py={6} spacing={8}>
-          <Stack alignItems={"flex-start"} spacing={2}>
+        <Stack
+          direction={{ xxs: "column-reverse", sm: "row" }}
+          py={6}
+          spacing={6}
+          justifyContent={{ xxs: "center", sm: "space-between" }}
+          alignItems={"center"}
+        >
+          <Stack alignItems={{ xxs: "center", sm: "flex-start" }} spacing={2}>
             <LogoComplete height={100} />
-            <Typography paragraph variant="caption" width={"20ch"}>
+            <Typography
+              paragraph
+              variant="caption"
+              width={"20ch"}
+              textAlign={{ xxs: "center", sm: "start" }}
+            >
               © 2023 Lummus Productions. All rights reserved.
             </Typography>
           </Stack>
-          <Grid container px={6} spacing={0}>
+          <Grid
+            container
+            spacing={0}
+            direction={{ xxs: "column", sm: "row" }}
+            alignItems={{ xxs: "center", sm: "flex-start" }}
+            flexBasis={"content"}
+          >
             {footerItems.map((item, index) => (
               <Grid item xs={12} sm={6} key={index}>
                 <Button variant="text">{item}</Button>

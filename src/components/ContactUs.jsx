@@ -41,21 +41,27 @@ const ContactUs = () => {
             sx={{
               display: "flex",
               alignItems: "center",
+              flexDirection: { xxs: "column", md: "row" },
               backgroundColor: "grey.50",
             }}
           >
-            <CardContent sx={{ padding: 6 }}>
-              <Stack spacing={4}>
-                <Typography variant="h2" width={"8ch"}>
+            <CardContent sx={{ py: 6, px: { xxs: 2, sm: 6 } }}>
+              <Stack spacing={4} textAlign={{ xxs: "center", md: "start" }}>
+                <Typography variant="h2" maxWidth={"8ch"}>
                   Começe já a sua jornada criativa!
                 </Typography>
                 <Typography variant="body2">
                   Unleash the power of modern advertising.
                 </Typography>
-                <Stack direction={"row"} spacing={1}>
+                <Stack
+                  direction={"row"}
+                  spacing={1}
+                  justifyContent={{ xxs: "center", md: "start" }}
+                  flexWrap={"wrap"}
+                >
                   {contactUsIcons.map((icon, index) => (
                     <IconButton key={index}>
-                      <Icon icon={icon} size={60} color={"primary"} />
+                      <Icon icon={icon} size={50} color={"primary"} />
                     </IconButton>
                   ))}
                 </Stack>
@@ -66,7 +72,11 @@ const ContactUs = () => {
               alt="contact-us-image"
               image="/src/assets/contact_us_img.png"
               sx={{
-                width: "34rem",
+                maxWidth: { xxs: "34rem", md: "50%" },
+                pb: { xs: 0, sm: 4, md: 0 },
+                objectFit: "cover",
+                width: "100%", 
+                height: "100%",
               }}
             ></CardMedia>
           </Card>

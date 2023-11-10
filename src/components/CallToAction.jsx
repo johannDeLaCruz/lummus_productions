@@ -5,9 +5,9 @@ import Typography from "@mui/material/Typography";
 
 function CallToAction() {
   return (
-    <Box pb={14} pt={30} component={"section"}>
+    <Box py={6} pt={{ md: 24 }} pb={{ md: 8 }} component={"section"}>
       <Container maxWidth={"xl"}>
-        <Stack alignItems={"center"} spacing={4}>
+        <Stack textAlign={"center"} spacing={4}>
           <Typography variant="h2">
             Eleve o seu negócio para outro nível
           </Typography>

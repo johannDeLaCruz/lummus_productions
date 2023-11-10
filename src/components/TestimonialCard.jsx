@@ -16,7 +16,7 @@ const TestimonialCard = ({
     <Card sx={sx}>
       <CardContent sx={{ p: 0 }}>
         {rating}
-        <Typography variant="body2" width={"16ch"} height={"12ch"}>
+        <Typography variant="body2" maxWidth={"16ch"} minHeight={"12ch"}>
           {description}
         </Typography>
       </CardContent>

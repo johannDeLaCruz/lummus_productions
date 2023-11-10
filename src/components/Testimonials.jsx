@@ -43,7 +43,7 @@ const Testimonials = () => {
       <Container maxWidth="xl">
         <Stack spacing={0} alignItems={"center"}>
           <LampImg height={200} />
-          <Stack alignItems={"center"} spacing={6} >
+          <Stack spacing={4} textAlign={"center"}>
             <Typography variant="h2">
               Ouça o que os nossos clientes têm a dizer!
             </Typography>
@@ -53,15 +53,26 @@ const Testimonials = () => {
             </Typography>
           </Stack>
         </Stack>
-        <Stack direction={"row"} spacing={6} px={4} justifyContent={"center"}>
+        <Stack
+          direction={{ xxs: "column", md: "row" }}
+          spacing={6}
+          py={{ xxs: 8, md: 2 }}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
           {testimonialsItems.map((item, index) => (
             <TestimonialCard
               key={index}
               {...item}
               sx={{
-                position: "relative",
+                display: "flex",
+                flexDirection: "column",
+                position: { md: "relative" },
                 p: 4,
-                transform: `translateY(${index % 2 === 0 ? "30%" : "50%"})`,
+                transform: {
+                  md: `translateY(${index % 2 === 0 ? "30%" : "50%"})`,
+                },
+                maxWidth: "20rem",
               }}
             />
           ))}

@@ -12,19 +12,25 @@ const Bio = () => {
     <Box component={"section"} sx={{ position: "relative" }}>
       <Container maxWidth={"xl"}>
         <Stack
-          direction={"row"}
+          direction={{ xxs: "column", md: "row" }}
           alignItems={"center"}
           justifyContent={"space-between"}
-          p={14}
+          spacing={6}
+          px={{ md: 4, lg: 12 }}
+          py={12}
         >
-          <Typography variant="h2" width={"6ch"}>
+          <Typography variant="h2" maxWidth={"6ch"} textAlign={"center"}>
             Let&lsquo;s create something amazing together!
           </Typography>
           <Card
             sx={{
               padding: 2,
-              position: "absolute",
-              transform: "translateX(+50rem)",
+              position: { md: "absolute" },
+              transform: {
+                md: "translateX(calc(100vw - 120% - 2rem))",
+                lg: "translateX(calc(100vw - 140% - 2rem))",
+                xl: "translateX(calc(+180%))",
+              },
             }}
             elevation={4}
           >
@@ -47,7 +53,7 @@ const Bio = () => {
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
-                gap: 3
+                gap: 3,
               }}
             />
             <CardContent>
@@ -72,7 +78,11 @@ const Bio = () => {
                     102
                   </Typography>
                 </Stack>
-                <Typography variant="caption" component={"h4"} fontWeight={"400"}>
+                <Typography
+                  variant="caption"
+                  component={"h4"}
+                  fontWeight={"400"}
+                >
                   Biografia:
                 </Typography>
                 <Typography
