@@ -12,7 +12,7 @@ const AboutUs = () => {
           justifyContent={"space-evenly"}
           spacing={5}
           alignItems={"center"}
-          pt={10}
+          pt={8}
         >
           <Stack spacing={3}>
             <Typography variant="h2">Conheça a Lummus!</Typography>

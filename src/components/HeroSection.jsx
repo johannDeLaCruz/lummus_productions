@@ -13,7 +13,7 @@ const HeroSection = () => {
         backgroundColor: "primary.main",
         color: "primary.contrastText",
       }}
-      pb={10}
+      pb={12}
     >
       <Container maxWidth={"xl"}>
         <Box
