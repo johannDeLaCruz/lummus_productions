@@ -1,3 +1,4 @@
+import { PropTypes } from "prop-types";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Container from "@mui/material/Container";
@@ -7,7 +8,7 @@ import Avatar from "@mui/material/Avatar";
 import TestimonialCard from "./TestimonialCard";
 import LampImg from "./LampImg";
 
-const Testimonials = () => {
+const Testimonials = ({ sectionName }) => {
   const testimonialsItems = [
     {
       rating: <Rating value={5} readOnly />,
@@ -39,6 +40,7 @@ const Testimonials = () => {
     <Box
       sx={{ backgroundColor: "primary.main", color: "primary.contrastText" }}
       component={"section"}
+      id={sectionName}
     >
       <Container maxWidth="xl">
         <Stack spacing={0} alignItems={"center"}>
@@ -80,6 +82,10 @@ const Testimonials = () => {
       </Container>
     </Box>
   );
+};
+
+Testimonials.propTypes = {
+  sectionName: PropTypes.string.isRequired,
 };
 
 export default Testimonials;

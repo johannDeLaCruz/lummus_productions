@@ -11,21 +11,30 @@ import CallToAction from "./components/CallToAction";
 import ContactUs from "./components/ContactUs";
 import Footer from "./components/Footer";
 
+const pages = [
+  "Início",
+  "Sobre",
+  "Serviços",
+  "Portfólio",
+  "Depoimentos",
+  "Contato",
+];
+
 function App() {
   return (
     <>
       <NavBar />
       <main>
-        <HeroSection />
+        <HeroSection sectionName={pages[0]} />
         <HeroVideo />
-        <AboutUs />
-        <Services />
-        <Portfolio />
+        <AboutUs sectionName={pages[1]} />
+        <Services sectionName={pages[2]} />
+        <Portfolio sectionName={pages[3]} />
         <Milestones />
         <Bio />
-        <Testimonials />
+        <Testimonials sectionName={pages[4]} />
         <CallToAction />
-        <ContactUs />
+        <ContactUs sectionName={pages[5]} />
       </main>
       <Footer />
     </>

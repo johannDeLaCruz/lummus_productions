@@ -12,7 +12,8 @@ import MenuItem from "@mui/material/MenuItem";
 import Logo from "./Logo";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link as ScrollLink, Events, scroller } from "react-scroll";
 
 const pages = [
   "Início",
@@ -25,13 +26,62 @@ const pages = [
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
+  const [activeLink, setActiveLink] = useState(pages[0]);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
+
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
+  const handleSetActive = (to) => {
+    setActiveLink(to);
+  };
+
+  useEffect(() => {
+    Events.scrollEvent.register("begin", handleSetActive);
+    Events.scrollEvent.register("end", handleSetActive);
+
+    return () => {
+      Events.scrollEvent.remove("begin");
+      Events.scrollEvent.remove("end");
+    };
+  }, []);
+
+  const handleScrollTo = (to) => {
+    scroller.scrollTo(to, {
+      duration: 800,
+      smooth: true,
+      offset: -88,
+      spy: true,
+      activeClass: "active",
+    });
+  };
+
+  const handleManualScroll = () => {
+    const scrollY = window.scrollY || document.documentElement.scrollTop;
+    const sections = pages.map((page) => document.getElementById(page));
+
+    for (let i = 0; i < sections.length; i++) {
+      const section = sections[i];
+      const sectionTop = section.offsetTop - 88;
+      const sectionBottom = sectionTop + section.clientHeight;
+
+      if (scrollY >= sectionTop && scrollY < sectionBottom) {
+        setActiveLink(pages[i]);
+        break;
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleManualScroll);
+    return () => {
+      window.removeEventListener("scroll", handleManualScroll);
+    };
+  }, []);
 
   return (
     <AppBar position="sticky" color="background">
@@ -43,7 +93,7 @@ function ResponsiveAppBar() {
           <Box sx={{ display: { xxs: "flex", md: "none" } }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
+              aria-label="current section"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
@@ -71,7 +121,21 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <ScrollLink
+                    to={page}
+                    smooth={true}
+                    duration={800}
+                    offset={-90}
+                  >
+                    <Typography
+                      textAlign="center"
+                      sx={{
+                        color: activeLink === page ? "primary.main" : "inherit",
+                      }}
+                    >
+                      {page}
+                    </Typography>
+                  </ScrollLink>
                 </MenuItem>
               ))}
             </Menu>
@@ -90,15 +154,21 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => {
+                  handleCloseNavMenu();
+                  handleScrollTo(page);
+                }}
                 sx={{
                   my: 2,
                   display: "block",
+                  color: activeLink === page ? "primary.main" : "inherit",
                 }}
                 variant="text"
                 size="medium"
               >
-                {page}
+                <ScrollLink to={page} smooth={true} duration={800} offset={-88}>
+                  {page}
+                </ScrollLink>
               </Button>
             ))}
           </Box>

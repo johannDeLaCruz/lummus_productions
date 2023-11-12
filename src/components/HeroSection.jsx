@@ -1,3 +1,4 @@
+import { PropTypes } from "prop-types";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
@@ -5,7 +6,7 @@ import Container from "@mui/material/Container";
 import Logo from "./Logo";
 import LampImg from "./LampImg";
 
-const HeroSection = () => {
+const HeroSection = ({ sectionName }) => {
   return (
     <Box
       component={"section"}
@@ -14,6 +15,7 @@ const HeroSection = () => {
         color: "primary.contrastText",
       }}
       pb={12}
+      id={sectionName}
     >
       <Container maxWidth={"xl"}>
         <Box
@@ -44,6 +46,10 @@ const HeroSection = () => {
       </Container>
     </Box>
   );
+};
+
+HeroSection.propTypes = {
+  sectionName: PropTypes.string.isRequired,
 };
 
 export default HeroSection;

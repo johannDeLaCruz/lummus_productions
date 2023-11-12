@@ -1,11 +1,12 @@
+import { PropTypes } from "prop-types";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 
-const AboutUs = () => {
+const AboutUs = ({ sectionName }) => {
   return (
-    <Box component={"section"}>
+    <Box component={"section"} id={sectionName}>
       <Container maxWidth={"xl"}>
         <Stack
           direction={{ xxs: "column", md: "row" }}
@@ -33,6 +34,10 @@ const AboutUs = () => {
       </Container>
     </Box>
   );
+};
+
+AboutUs.propTypes = {
+  sectionName: PropTypes.string.isRequired,
 };
 
 export default AboutUs;

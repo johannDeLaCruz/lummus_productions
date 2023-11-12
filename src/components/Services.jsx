@@ -12,8 +12,9 @@ import CardContent from "@mui/material/CardContent";
 import Container from "@mui/material/Container";
 import Icon from "./Icon";
 import LampImg from "./LampImg";
+import { PropTypes } from "prop-types";
 
-const Services = () => {
+const Services = ({ sectionName }) => {
   const services = [
     {
       icon: AccessibilityIcon,
@@ -40,7 +41,12 @@ const Services = () => {
     },
   ];
   return (
-    <Box sx={{ backgroundColor: "primary.main" }} component={"section"} pb={10}>
+    <Box
+      sx={{ backgroundColor: "primary.main" }}
+      component={"section"}
+      pb={10}
+      id={sectionName}
+    >
       <Container maxWidth={"xl"}>
         <Stack spacing={0} alignItems={"center"}>
           <LampImg height={200} />
@@ -107,6 +113,10 @@ const Services = () => {
       </Container>
     </Box>
   );
+};
+
+Services.propTypes = {
+  sectionName: PropTypes.string.isRequired,
 };
 
 export default Services;

@@ -13,6 +13,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import Icon from "./Icon";
 import LampImg from "./LampImg";
+import { PropTypes } from "prop-types";
 
 const contactUsIcons = [
   EmailIcon,
@@ -22,7 +23,7 @@ const contactUsIcons = [
   TelegramIcon,
 ];
 
-const ContactUs = () => {
+const ContactUs = ({ sectionName }) => {
   return (
     <Box
       sx={{
@@ -30,6 +31,7 @@ const ContactUs = () => {
       }}
       pb={10}
       component={"section"}
+      id={sectionName}
     >
       <Container
         maxWidth={"xl"}
@@ -75,7 +77,7 @@ const ContactUs = () => {
                 maxWidth: { xxs: "34rem", md: "50%" },
                 pb: { xs: 0, sm: 4, md: 0 },
                 objectFit: "cover",
-                width: "100%", 
+                width: "100%",
                 height: "100%",
               }}
             ></CardMedia>
@@ -84,6 +86,10 @@ const ContactUs = () => {
       </Container>
     </Box>
   );
+};
+
+ContactUs.propTypes = {
+  sectionName: PropTypes.string.isRequired,
 };
 
 export default ContactUs;
