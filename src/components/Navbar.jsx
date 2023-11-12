@@ -14,17 +14,9 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { useState, useEffect } from "react";
 import { Link as ScrollLink, Events, scroller } from "react-scroll";
+import { PropTypes } from "prop-types";
 
-const pages = [
-  "Início",
-  "Sobre",
-  "Serviços",
-  "Portfólio",
-  "Depoimentos",
-  "Contato",
-];
-
-function ResponsiveAppBar() {
+function ResponsiveAppBar({ pages }) {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [activeLink, setActiveLink] = useState(pages[0]);
 
@@ -194,4 +186,9 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
+
+ResponsiveAppBar.propTypes = {
+  pages: PropTypes.array.isRequired,
+};
+
 export default ResponsiveAppBar;

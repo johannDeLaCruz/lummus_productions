@@ -23,7 +23,7 @@ const pages = [
 function App() {
   return (
     <>
-      <NavBar />
+      <NavBar pages={pages} />
       <main>
         <HeroSection sectionName={pages[0]} />
         <HeroVideo />
