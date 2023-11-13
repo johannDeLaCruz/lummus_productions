@@ -2,6 +2,7 @@ import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
+import AnimatedGrid from "./AnimatedGrid";
 import AccessibilityIcon from "@mui/icons-material/Accessibility";
 import Diversity3Icon from "@mui/icons-material/Diversity3";
 import PaletteIcon from "@mui/icons-material/Palette";
@@ -13,6 +14,11 @@ import Container from "@mui/material/Container";
 import Icon from "./Icon";
 import LampImg from "./LampImg";
 import { PropTypes } from "prop-types";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import AnimatedStack from "./AnimatedStack";
+import AnimatedTypography from "./AnimatedTypography";
+import { horizontalPopChildren } from "../utils/animationVariants";
 
 const Services = ({ sectionName }) => {
   const services = [
@@ -40,6 +46,10 @@ const Services = ({ sectionName }) => {
         "Identifies opportunities for business growth and develops strategies to capitalize on them.",
     },
   ];
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, treshold: 0.5 });
+
   return (
     <Box
       sx={{ backgroundColor: "primary.main" }}
@@ -50,28 +60,48 @@ const Services = ({ sectionName }) => {
       <Container maxWidth={"xl"}>
         <Stack spacing={0} alignItems={"center"}>
           <LampImg height={200} />
-          <Stack
+          <AnimatedStack
             spacing={4}
             alignItems={"center"}
             sx={{ color: "primary.contrastText" }}
             pb={7}
+            isInView={isInView}
+            ref={ref}
           >
-            <Typography variant="h2" textAlign={"center"}>
+            <AnimatedTypography
+              variant="h2"
+              component={motion.h2}
+              textAlign={"center"}
+            >
               Nossos Serviços
-            </Typography>
-            <Typography variant="body1" textAlign={"center"}>
+            </AnimatedTypography>
+            <AnimatedTypography
+              variant="body1"
+              component={motion.p}
+              textAlign={"center"}
+            >
               A Lummus tem tudo o que você precisa!
-            </Typography>
-          </Stack>
+            </AnimatedTypography>
+          </AnimatedStack>
         </Stack>
-        <Grid
+        <AnimatedGrid
           container
           spacing={4}
           justifyContent={"center"}
           sx={{ px: { xs: 2, sm: 0, md: 8, lg: 0 } }}
+          isInView={isInView}
+          ref={ref}
         >
           {services.map((service, index) => (
-            <Grid item xs={12} sm={6} lg={3} key={index}>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              lg={3}
+              key={index}
+              variants={horizontalPopChildren}
+              component={motion.div}
+            >
               <Card sx={{ padding: 2 }}>
                 <CardHeader
                   avatar={
@@ -109,7 +139,7 @@ const Services = ({ sectionName }) => {
               </Card>
             </Grid>
           ))}
-        </Grid>
+        </AnimatedGrid>
       </Container>
     </Box>
   );

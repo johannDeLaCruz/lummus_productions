@@ -5,8 +5,16 @@ import Stack from "@mui/material/Stack";
 import Container from "@mui/material/Container";
 import Logo from "./Logo";
 import LampImg from "./LampImg";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import AnimatedStack from "./AnimatedStack";
+import { verticalPopChildren } from "../utils/animationVariants";
 
 const HeroSection = ({ sectionName }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, treshold: 0.5 });
+
   return (
     <Box
       component={"section"}
@@ -27,8 +35,18 @@ const HeroSection = ({ sectionName }) => {
         >
           <LampImg height={200} />
         </Box>
-        <Stack spacing={1} alignItems={"center"}>
-          <Stack direction={{ xxs: "column", lg: "row" }} spacing={2}>
+        <AnimatedStack
+          isInView={isInView}
+          spacing={1}
+          alignItems={"center"}
+          ref={ref}
+        >
+          <Stack
+            direction={{ xxs: "column", lg: "row" }}
+            spacing={2}
+            component={motion.div}
+            variants={verticalPopChildren}
+          >
             <Typography
               variant="h1"
               sx={{ display: "flex", alignItems: "center" }}
@@ -38,11 +56,17 @@ const HeroSection = ({ sectionName }) => {
             </Typography>
             <Logo height={120} logoColor="white" />
           </Stack>
-          <Typography variant="body1" sx={{ maxWidth: "30ch" }} align="center">
+          <Typography
+            variant="body1"
+            sx={{ maxWidth: "30ch" }}
+            align="center"
+            component={motion.p}
+            variants={verticalPopChildren}
+          >
             We&lsquo;re passionate about helping you grow your business. As a
             new client, you can get started with Lummus.
           </Typography>
-        </Stack>
+        </AnimatedStack>
       </Container>
     </Box>
   );
