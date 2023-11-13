@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Card from "@mui/material/Card";
@@ -6,22 +7,36 @@ import Typography from "@mui/material/Typography";
 import CeoAvatar from "./CeoAvatar";
 import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import AnimatedStack from "./AnimatedStack";
+import AnimatedTypography from "./AnimatedTypography";
 
 const Bio = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.4 });
+
   return (
     <Box component={"section"} sx={{ position: "relative" }}>
       <Container maxWidth={"xl"}>
-        <Stack
+        <AnimatedStack
           direction={{ xxs: "column", md: "row" }}
           alignItems={"center"}
           justifyContent={"space-between"}
           spacing={6}
           px={{ md: 4, lg: 12 }}
           py={12}
+          ref={ref}
+          isInView={isInView}
         >
-          <Typography variant="h2" maxWidth={"6ch"} textAlign={"center"}>
+          <AnimatedTypography
+            variant="h2"
+            maxWidth={"6ch"}
+            textAlign={"center"}
+            component={motion.h2}
+          >
             Let&lsquo;s create something amazing together!
-          </Typography>
+          </AnimatedTypography>
           <Card
             sx={{
               padding: 2,
@@ -100,7 +115,7 @@ const Bio = () => {
               </Stack>
             </CardContent>
           </Card>
-        </Stack>
+        </AnimatedStack>
       </Container>
     </Box>
   );

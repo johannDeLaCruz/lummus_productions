@@ -2,11 +2,15 @@ import { PropTypes } from "prop-types";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
+import AnimatedTypography from "./AnimatedTypography";
+import AnimatedStack from "./AnimatedStack";
 import Rating from "@mui/material/Rating";
 import Avatar from "@mui/material/Avatar";
 import TestimonialCard from "./TestimonialCard";
 import LampImg from "./LampImg";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const Testimonials = ({ sectionName }) => {
   const testimonialsItems = [
@@ -36,6 +40,9 @@ const Testimonials = ({ sectionName }) => {
     },
   ];
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.4 });
+
   return (
     <Box
       sx={{ backgroundColor: "primary.main", color: "primary.contrastText" }}
@@ -45,22 +52,28 @@ const Testimonials = ({ sectionName }) => {
       <Container maxWidth="xl">
         <Stack spacing={0} alignItems={"center"}>
           <LampImg height={200} />
-          <Stack spacing={4} textAlign={"center"}>
-            <Typography variant="h2">
+          <AnimatedStack
+            spacing={4}
+            textAlign={"center"}
+            isInView={isInView}
+            ref={ref}
+          >
+            <AnimatedTypography variant="h2" component={motion.h2}>
               Ouça o que os nossos clientes têm a dizer!
-            </Typography>
-            <Typography variant="body2">
+            </AnimatedTypography>
+            <AnimatedTypography variant="body2" component={motion.p}>
               Check out what our satisfied clients have to say about our
               services.
-            </Typography>
-          </Stack>
+            </AnimatedTypography>
+          </AnimatedStack>
         </Stack>
-        <Stack
+        <AnimatedStack
           direction={{ xxs: "column", md: "row" }}
           spacing={6}
           py={{ xxs: 8, md: 2 }}
           justifyContent={"center"}
           alignItems={"center"}
+          isInView={isInView}
         >
           {testimonialsItems.map((item, index) => (
             <TestimonialCard
@@ -78,7 +91,7 @@ const Testimonials = ({ sectionName }) => {
               }}
             />
           ))}
-        </Stack>
+        </AnimatedStack>
       </Container>
     </Box>
   );

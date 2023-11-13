@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import AnimatedTypography from "./AnimatedTypography";
+import AnimatedStack from "./AnimatedStack";
 import Container from "@mui/material/Container";
 import List from "@mui/material/List";
 import ListItemText from "@mui/material/ListItemText";
@@ -9,6 +10,7 @@ import LampImg from "./LampImg";
 import Counter from "./Counter";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Milestones = () => {
   const milestonesList = [
@@ -36,18 +38,19 @@ const Milestones = () => {
       pb={12}
     >
       <Container maxWidth={"xl"}>
-        <Stack
-          spacing={0}
-          alignItems={{ xxs: "center", md: "start" }}
-          px={12}
-          ref={ref}
-        >
+        <Stack spacing={0} alignItems={{ xxs: "center", md: "start" }} px={12}>
           <LampImg height={200} />
-          <Stack spacing={4} alignItems={"center"} alignSelf={"center"}>
+          <AnimatedStack
+            spacing={4}
+            alignItems={"center"}
+            alignSelf={"center"}
+            ref={ref}
+            isInView={isInView}
+          >
             <AnimatedTypography
               variant="h2"
               textAlign={"center"}
-              isInView={isInView}
+              component={motion.h2}
             >
               Nossas Conquistas
             </AnimatedTypography>
@@ -84,7 +87,7 @@ const Milestones = () => {
                 </ListItem>
               ))}
             </List>
-          </Stack>
+          </AnimatedStack>
         </Stack>
       </Container>
     </Box>

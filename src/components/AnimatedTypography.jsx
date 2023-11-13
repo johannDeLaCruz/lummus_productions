@@ -4,12 +4,12 @@ import { Typography } from "@mui/material";
 import { verticalPopChildren } from "../utils/animationVariants";
 
 const CustomTypography = ({ children, ...rest }) => {
-  //   const MotionComponent = motion[variant] || motion.div;
+//   const MotionComponent = motion[variant] || motion.div;
 
   return (
     <Typography
-      //   component={MotionComponent}
-      //   initial="hidden"
+    //   component={MotionComponent}
+    //   initial="hidden"
       variants={verticalPopChildren}
       //   animate={isInView ? "visible" : "hidden"}
       {...rest}
@@ -21,9 +21,9 @@ const CustomTypography = ({ children, ...rest }) => {
 
 CustomTypography.propTypes = {
   children: PropTypes.node.isRequired,
-  //   isInView: PropTypes.bool.isRequired,
+//   isInView: PropTypes.bool.isRequired,
   rest: PropTypes.object,
-  variant: PropTypes.string.isRequired,
+  // variant: PropTypes.string.isRequired,
 };
 
 export default CustomTypography;

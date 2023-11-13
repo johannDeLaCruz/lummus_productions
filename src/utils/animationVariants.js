@@ -4,9 +4,9 @@ export const verticalPop = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.5,
-      duration: 0.6,
-      staggerChildren: 0.8,
+      delay: 0.4,
+      duration: 0.5,
+      staggerChildren: 0.6,
     },
   },
 };
@@ -16,7 +16,7 @@ export const verticalPopChildren = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.5,
     },
   },
 };
@@ -28,7 +28,7 @@ export const horizontalPop = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 0.5,
+      delay: 0.4,
       duration: 0.4,
       staggerChildren: 0.3,
     },

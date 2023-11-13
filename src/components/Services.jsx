@@ -48,7 +48,7 @@ const Services = ({ sectionName }) => {
   ];
 
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, treshold: 0.5 });
+  const isInView = useInView(ref, { once: true, amount: 0.4 });
 
   return (
     <Box

@@ -1,7 +1,6 @@
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -14,6 +13,10 @@ import TelegramIcon from "@mui/icons-material/Telegram";
 import Icon from "./Icon";
 import LampImg from "./LampImg";
 import { PropTypes } from "prop-types";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import AnimatedTypography from "./AnimatedTypography";
+import AnimatedStack from "./AnimatedStack";
 
 const contactUsIcons = [
   EmailIcon,
@@ -24,6 +27,9 @@ const contactUsIcons = [
 ];
 
 const ContactUs = ({ sectionName }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.4 });
+
   return (
     <Box
       sx={{
@@ -48,13 +54,22 @@ const ContactUs = ({ sectionName }) => {
             }}
           >
             <CardContent sx={{ py: 6, px: { xxs: 2, sm: 6 } }}>
-              <Stack spacing={4} textAlign={{ xxs: "center", md: "start" }}>
-                <Typography variant="h2" maxWidth={"8ch"}>
+              <AnimatedStack
+                spacing={4}
+                textAlign={{ xxs: "center", md: "start" }}
+                ref={ref}
+                isInView={isInView}
+              >
+                <AnimatedTypography
+                  variant="h2"
+                  maxWidth={"8ch"}
+                  component={motion.h2}
+                >
                   Começe já a sua jornada criativa!
-                </Typography>
-                <Typography variant="body2">
+                </AnimatedTypography>
+                <AnimatedTypography variant="body2" component={motion.p}>
                   Unleash the power of modern advertising.
-                </Typography>
+                </AnimatedTypography>
                 <Stack
                   direction={"row"}
                   spacing={1}
@@ -67,7 +82,7 @@ const ContactUs = ({ sectionName }) => {
                     </IconButton>
                   ))}
                 </Stack>
-              </Stack>
+              </AnimatedStack>
             </CardContent>
             <CardMedia
               component="img"

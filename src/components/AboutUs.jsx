@@ -20,10 +20,10 @@ const AboutUs = ({ sectionName }) => {
           justifyContent={"space-evenly"}
           spacing={5}
           alignItems={"center"}
-          pt={8}
+          pt={4}
         >
           <AnimatedStack isInView={isInView} spacing={3} ref={ref}>
-            <AnimatedTypography variant="h2" component={motion.h2}>
+            <AnimatedTypography variant="h2" component={motion.h2} >
               Conheça a Lummus!
             </AnimatedTypography>
             <AnimatedTypography
