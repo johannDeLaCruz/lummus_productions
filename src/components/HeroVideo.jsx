@@ -6,7 +6,7 @@ const VideoPlayer = () => {
   const [isInView, setIsInView] = useState(false);
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.5, // When 50% of the video is in view
+    amount: 0.5, // When 50% of the video is in view
   });
 
   useEffect(() => {

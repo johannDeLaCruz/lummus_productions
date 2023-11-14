@@ -14,7 +14,7 @@ import AnimatedTypography from "./AnimatedTypography";
 
 const Bio = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.4 });
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
 
   return (
     <Box component={"section"} sx={{ position: "relative" }}>

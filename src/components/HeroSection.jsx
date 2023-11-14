@@ -5,15 +5,21 @@ import Stack from "@mui/material/Stack";
 import Container from "@mui/material/Container";
 import Logo from "./Logo";
 import LampImg from "./LampImg";
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import AnimatedStack from "./AnimatedStack";
 import { verticalPopChildren } from "../utils/animationVariants";
 
 const HeroSection = ({ sectionName }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.4 });
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
+
+  function useParallax(value) {
+    return useTransform(value, [0, 0.15], [0, 300]);
+  }
+
+  const { scrollYProgress } = useScroll();
+  const y = useParallax(scrollYProgress);
 
   return (
     <Box
@@ -32,6 +38,8 @@ const HeroSection = ({ sectionName }) => {
             justifyContent: "center",
             alignItems: "center",
           }}
+          style={{ y }}
+          component={motion.div}
         >
           <LampImg height={200} />
         </Box>

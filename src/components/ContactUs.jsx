@@ -28,7 +28,7 @@ const contactUsIcons = [
 
 const ContactUs = ({ sectionName }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.4 });
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
 
   return (
     <Box

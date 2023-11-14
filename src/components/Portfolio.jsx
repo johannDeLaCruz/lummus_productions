@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
-import { InstagramEmbed } from "react-social-media-embed";
+// import { InstagramEmbed } from "react-social-media-embed";
 import LampImg from "./LampImg";
 import { PropTypes } from "prop-types";
 import AnimatedStack from "./AnimatedStack";
@@ -35,7 +35,7 @@ const Portfolio = ({ sectionName }) => {
           </AnimatedStack>
         </Stack>
 
-        <Stack direction={"row"} spacing={3} py={6} justifyContent={"center"}>
+        {/* <Stack direction={"row"} spacing={3} py={6} justifyContent={"center"}>
           <InstagramEmbed
             url="https://www.instagram.com/p/CyJiBYtPcC3/"
             width={328}
@@ -51,7 +51,7 @@ const Portfolio = ({ sectionName }) => {
             width={328}
             captioned="false"
           />
-        </Stack>
+        </Stack> */}
       </Container>
     </Box>
   );

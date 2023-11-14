@@ -48,7 +48,7 @@ const Services = ({ sectionName }) => {
   ];
 
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.4 });
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
     <Box
@@ -59,7 +59,9 @@ const Services = ({ sectionName }) => {
     >
       <Container maxWidth={"xl"}>
         <Stack spacing={0} alignItems={"center"}>
-          <LampImg height={200} />
+          <Box component={motion.div}>
+            <LampImg height={200} />
+          </Box>
           <AnimatedStack
             spacing={4}
             alignItems={"center"}
