@@ -51,7 +51,7 @@ const Testimonials = ({ sectionName }) => {
     >
       <Container maxWidth="xl">
         <Stack spacing={0} alignItems={"center"}>
-          <LampImg height={200} />
+          <LampImg isInView={isInView} />
           <AnimatedStack
             spacing={4}
             textAlign={"center"}

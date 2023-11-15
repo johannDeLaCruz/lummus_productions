@@ -41,7 +41,7 @@ const HeroSection = ({ sectionName }) => {
           style={{ y }}
           component={motion.div}
         >
-          <LampImg height={200} />
+          <LampImg isInView={isInView} />
         </Box>
         <AnimatedStack
           isInView={isInView}

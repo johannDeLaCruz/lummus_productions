@@ -15,11 +15,11 @@ import { motion } from "framer-motion";
 const Milestones = () => {
   const milestonesList = [
     {
-      title: "2020",
-      description: "Ano de Fundação",
+      title: "5",
+      description: "Anos De Atividade",
     },
     {
-      title: "+1000",
+      title: "+200",
       description: "Clientes Satisfeitos",
     },
     {
@@ -39,7 +39,7 @@ const Milestones = () => {
     >
       <Container maxWidth={"xl"}>
         <Stack spacing={0} alignItems={{ xxs: "center", md: "start" }} px={12}>
-          <LampImg height={200} />
+          <LampImg isInView={isInView} />
           <AnimatedStack
             spacing={4}
             alignItems={"center"}

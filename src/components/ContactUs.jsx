@@ -44,7 +44,7 @@ const ContactUs = ({ sectionName }) => {
         sx={{ display: "flex", justifyContent: "center" }}
       >
         <Stack spacing={2} alignItems={"center"}>
-          <LampImg />
+          <LampImg isInView={isInView} />
           <Card
             sx={{
               display: "flex",

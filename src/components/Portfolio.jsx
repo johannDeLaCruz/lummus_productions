@@ -13,12 +13,12 @@ import { motion } from "framer-motion";
 
 const Portfolio = ({ sectionName }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.4  });
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
   return (
     <Box component={"section"} pb={8} id={sectionName}>
       <Container maxWidth={"xl"}>
         <Stack spacing={0} alignItems={"center"}>
-          <LampImg height={200} color="purple" />
+          <LampImg isInView={isInView} color="purple" />
           <AnimatedStack
             spacing={4}
             textAlign={"center"}
