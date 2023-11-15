@@ -58,8 +58,13 @@ const Services = ({ sectionName }) => {
       id={sectionName}
     >
       <Container maxWidth={"xl"}>
-        <Stack spacing={0} alignItems={"center"}>
-          <Box component={motion.div}>
+        <Stack spacing={0} alignItems={"center"} ref={ref}>
+          <Box
+            component={motion.div}
+            initial={{ y: -180 }}
+            animate={isInView ? { y: -10 } : { y: -180 }}
+            transition={{ delay: 0.5, type: "spring", bounce: 0.6 }}
+          >
             <LampImg height={200} />
           </Box>
           <AnimatedStack
@@ -68,7 +73,6 @@ const Services = ({ sectionName }) => {
             sx={{ color: "primary.contrastText" }}
             pb={7}
             isInView={isInView}
-            ref={ref}
           >
             <AnimatedTypography
               variant="h2"
