@@ -6,13 +6,23 @@ export default function LampImg({ height, color, isInView }) {
   const src = `/src/assets/lamp_original_${color}.png`;
   return (
     <Box
-      component={motion.div}
-      sx={{ zIndex: 0 }}
-      initial={{ y: -280 }}
-      animate={isInView ? { y: -50 } : { y: -280 }}
-      transition={{ delay: 0.5, type: "spring", bounce: 0.5 }}
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+      height={200}
     >
-      <img src={src} alt="lamp_img" height={height} />
+      <Box
+        component={motion.div}
+        zIndex={0}
+        position={"absolute"}
+        initial={{ y: -280 }}
+        animate={isInView ? { y: -20 } : { y: -280 }}
+        transition={{ delay: 0.5, type: "spring", bounce: 0.5 }}
+      >
+        <img src={src} alt="lamp_img" height={height} />
+      </Box>
     </Box>
   );
 }
