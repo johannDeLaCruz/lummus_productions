@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Card from "@mui/material/Card";
@@ -14,10 +14,14 @@ import AnimatedTypography from "./AnimatedTypography";
 
 const Bio = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const isInView = useInView(ref, { once: true, amount: 0.4 });
 
   return (
-    <Box component={"section"} sx={{ position: "relative" }}>
+    <Box
+      component={"section"}
+      sx={{ backgroundColor: "background.main", position: "relative" }}
+      zIndex={1}
+    >
       <Container maxWidth={"xl"}>
         <AnimatedStack
           direction={{ xxs: "column", md: "row" }}

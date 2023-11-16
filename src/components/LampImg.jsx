@@ -7,9 +7,10 @@ export default function LampImg({ height, color, isInView }) {
   return (
     <Box
       component={motion.div}
+      sx={{ zIndex: 0 }}
       initial={{ y: -280 }}
       animate={isInView ? { y: -50 } : { y: -280 }}
-      transition={{ delay: 0.6, type: "spring", bounce: 0.6 }}
+      transition={{ delay: 0.5, type: "spring", bounce: 0.5 }}
     >
       <img src={src} alt="lamp_img" height={height} />
     </Box>

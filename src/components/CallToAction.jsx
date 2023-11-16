@@ -10,7 +10,14 @@ function CallToAction() {
   const isInView = useInView(ref, { once: true, amount: 0.4 });
 
   return (
-    <Box py={6} pt={{ md: 24 }} pb={{ md: 8 }} component={"section"}>
+    <Box
+      py={6}
+      pt={{ md: 24 }}
+      pb={{ md: 8 }}
+      component={"section"}
+      sx={{ backgroundColor: "background.main", position: "relative" }}
+      zIndex={1}
+    >
       <Container maxWidth={"xl"}>
         <AnimatedStack
           textAlign={"center"}

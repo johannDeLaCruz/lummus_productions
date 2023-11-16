@@ -13,6 +13,9 @@ const theme = createTheme({
     grey: {
       50: "#F0F0F0",
     },
+    background: {
+      main: "#fff",
+    },
   },
   typography: {
     fontFamily: "'Bree Serif', serif;",

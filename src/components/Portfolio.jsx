@@ -13,9 +13,15 @@ import { motion } from "framer-motion";
 
 const Portfolio = ({ sectionName }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const isInView = useInView(ref, { once: true, amount: 0.4 });
   return (
-    <Box component={"section"} pb={8} id={sectionName}>
+    <Box
+      component={"section"}
+      pb={8}
+      id={sectionName}
+      sx={{ backgroundColor: "background.main", position: "relative" }}
+      zIndex={1}
+    >
       <Container maxWidth={"xl"}>
         <Stack spacing={0} alignItems={"center"}>
           <LampImg isInView={isInView} color="purple" />

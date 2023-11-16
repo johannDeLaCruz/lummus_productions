@@ -12,7 +12,7 @@ import { verticalPopChildren } from "../utils/animationVariants";
 
 const HeroSection = ({ sectionName }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const isInView = useInView(ref, { once: true, amount: 0.4 });
 
   function useParallax(value) {
     return useTransform(value, [0, 0.15], [0, 300]);

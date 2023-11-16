@@ -13,7 +13,12 @@ const AboutUs = ({ sectionName }) => {
   const isInView = useInView(ref, { once: true, amount: 0.4 });
 
   return (
-    <Box component={"section"} id={sectionName}>
+    <Box
+      component={"section"}
+      id={sectionName}
+      sx={{ backgroundColor: "background.main", position: "relative" }}
+      zIndex={3}
+    >
       <Container maxWidth={"xl"}>
         <Stack
           direction={{ xxs: "column", md: "row" }}
@@ -23,7 +28,7 @@ const AboutUs = ({ sectionName }) => {
           pt={4}
         >
           <AnimatedStack isInView={isInView} spacing={3} ref={ref}>
-            <AnimatedTypography variant="h2" component={motion.h2} >
+            <AnimatedTypography variant="h2" component={motion.h2}>
               Conheça a Lummus!
             </AnimatedTypography>
             <AnimatedTypography

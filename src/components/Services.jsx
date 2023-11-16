@@ -52,10 +52,11 @@ const Services = ({ sectionName }) => {
 
   return (
     <Box
-      sx={{ backgroundColor: "primary.main" }}
+      sx={{ backgroundColor: "primary.main", position: "relative" }}
       component={"section"}
       pb={10}
       id={sectionName}
+      zIndex={2}
     >
       <Container maxWidth={"xl"}>
         <Stack spacing={0} alignItems={"center"} ref={ref}>
