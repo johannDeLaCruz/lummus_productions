@@ -88,7 +88,7 @@ const Services = ({ sectionName }) => {
           container
           spacing={4}
           justifyContent={"center"}
-          sx={{ px: { xs: 2, sm: 0, md: 8, lg: 0 } }}
+          sx={{ px: { xxs: 0, xs: "10%", sm: 0, md: 8, lg: 0 } }}
           isInView={isInView}
           ref={ref}
         >
