@@ -12,13 +12,12 @@ import MenuItem from "@mui/material/MenuItem";
 import Logo from "./Logo";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import Fade from "@mui/material/Fade";
 import { useState, useEffect } from "react";
 import { Link as ScrollLink, Events, scroller } from "react-scroll";
 import { PropTypes } from "prop-types";
-import { useTheme } from "@mui/material/styles";
 
 const NavBar = ({ pages }) => {
-  const theme = useTheme();
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [activeLink, setActiveLink] = useState(pages[0]);
 
@@ -49,7 +48,7 @@ const NavBar = ({ pages }) => {
       duration: 800,
       smooth: true,
       offset: -88,
-      spy: true,
+      // spy: true,
       activeClass: "active",
     });
   };
@@ -165,18 +164,24 @@ const NavBar = ({ pages }) => {
                   {page}
                 </ScrollLink>
                 {activeLink === page && (
-                  <div
-                    style={{
-                      position: "absolute",
-                      bottom: "-0.25rem",
-                      left: "50%",
-                      transform: "translateX(-50%)",
-                      width: "0.5rem",
-                      height: "0.5rem",
-                      borderRadius: "50%",
-                      backgroundColor: theme.palette.primary.main,
-                    }}
-                  />
+                  <Fade
+                    in={true}
+                    appear={true}
+                    timeout={2000}
+                  >
+                    <Box
+                      sx={{
+                        position: "absolute",
+                        bottom: "-0.25rem",
+                        left: "50%",
+                        transform: "translateX(-50%)",
+                        width: "0.5rem",
+                        height: "0.5rem",
+                        borderRadius: "50%",
+                        backgroundColor: "primary.main",
+                      }}
+                    ></Box>
+                  </Fade>
                 )}
               </Button>
             ))}
