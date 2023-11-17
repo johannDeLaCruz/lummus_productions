@@ -88,7 +88,9 @@ const Testimonials = ({ sectionName }) => {
                   md: `translateY(${index % 2 === 0 ? "30%" : "50%"})`,
                 },
                 maxWidth: "20rem",
+                zIndex: 2,
               }}
+            
             />
           ))}
         </AnimatedStack>

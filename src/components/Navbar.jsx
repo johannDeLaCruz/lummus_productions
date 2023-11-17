@@ -73,7 +73,7 @@ function ResponsiveAppBar({ pages }) {
     return () => {
       window.removeEventListener("scroll", handleManualScroll);
     };
-  }, []);
+  },);
 
   return (
     <AppBar position="sticky" color="background">
