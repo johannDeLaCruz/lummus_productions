@@ -62,7 +62,7 @@ const HeroSection = ({ sectionName }) => {
             >
               Unleash Your Creativity With
             </Typography>
-            <Logo height={120} logoColor="white" animated={true} />
+            <Logo height={110} logoColor="white" animated={true} />
           </Stack>
           <Typography
             variant="body1"

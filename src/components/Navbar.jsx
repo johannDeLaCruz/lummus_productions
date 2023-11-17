@@ -82,7 +82,11 @@ const NavBar = ({ pages }) => {
       <Container maxWidth="xl">
         <Toolbar
           disableGutters
-          sx={{ display: "flex", justifyContent: "space-between" }}
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            py: { xxs: 1, sm: 0 },
+          }}
         >
           <Box sx={{ display: { xxs: "flex", md: "none" } }}>
             <IconButton
@@ -134,11 +138,7 @@ const NavBar = ({ pages }) => {
               ))}
             </Menu>
           </Box>
-          <Logo
-            sx={{ display: { xxs: "flex", md: "none" }, mr: 1 }}
-            height={60}
-            logoColor="purple"
-          />
+          <Logo height={60} logoColor="purple" />
           <Box
             sx={{
               display: { xxs: "none", md: "flex", gap: "1.5rem", flexGrow: 1 },
