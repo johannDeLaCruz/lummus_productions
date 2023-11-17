@@ -47,20 +47,24 @@ export const horizontalPopChildren = {
   },
 };
 
-// export const pathFillIn = {
-//   hidden: {
-//     pathLength: 0,
-//     opacity: 0,
-//     fill: "hsla(360, 100%, 100%, 0)",
-//   },
-//   visible: {
-//     pathLength: 1,
-//     opacity: 1,
-//     fill: "hsla(360, 100%, 100%, 1)",
-//     transition: {
-//       pathLength: { type: "spring", duration: 1.5, bounce: 0 },
-//       opacity: { duration: 0.01 },
-//       fill: { duration: 1.5 },
-//     },
-//   },
-// };
+export const createPathFillIn = (fillColor) => ({
+  hidden: {
+    pathLength: 0,
+    opacity: 0,
+    fill: `hsla(360, 100%, 100%, 0)`,
+    stroke: `hsla(360, 100%, 100%, 0)`,
+  },
+  visible: {
+    pathLength: 1,
+    opacity: 1,
+    fill: fillColor,
+    stroke: fillColor,
+    transition: {
+      delay: 1,
+      pathLength: { duration: 4, type: "spring", bounce: 0 },
+      opacity: { duration: 0.01 },
+      stroke: { duration: 4, type: "spring", bounce: 0 },
+      fill: { delay: 2, duration: 1, ease: "linear" },
+    },
+  },
+});

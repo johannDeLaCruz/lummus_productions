@@ -15,11 +15,9 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import { useState, useEffect } from "react";
 import { Link as ScrollLink, Events, scroller } from "react-scroll";
 import { PropTypes } from "prop-types";
-import {useTheme} from '@mui/material/styles';
+import { useTheme } from "@mui/material/styles";
 
-
-
-function NavBar({ pages }) {
+const NavBar = ({ pages }) => {
   const theme = useTheme();
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [activeLink, setActiveLink] = useState(pages[0]);
@@ -204,7 +202,7 @@ function NavBar({ pages }) {
       </Container>
     </AppBar>
   );
-}
+};
 
 NavBar.propTypes = {
   pages: PropTypes.array.isRequired,
