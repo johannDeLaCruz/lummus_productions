@@ -45,7 +45,7 @@ const HeroSection = ({ sectionName }) => {
         </Box>
         <AnimatedStack
           isInView={isInView}
-          spacing={1}
+          spacing={2}
           alignItems={"center"}
           ref={ref}
         >
