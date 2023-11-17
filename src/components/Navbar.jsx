@@ -133,6 +133,7 @@ const NavBar = ({ pages }) => {
               display: { xxs: "none", md: "flex", gap: "1.5rem", flexGrow: 1 },
             }}
             px={6}
+            component={"nav"}
           >
             {pages.map((page) => (
               <Button
