@@ -61,9 +61,9 @@ export const createPathFillIn = (fillColor) => ({
     stroke: fillColor,
     transition: {
       delay: 1,
-      pathLength: { duration: 4, type: "spring", bounce: 0 },
+      pathLength: { duration: 3, type: "spring", bounce: 0 },
       opacity: { duration: 0.01 },
-      stroke: { duration: 4, type: "spring", bounce: 0 },
+      stroke: { duration: 3, type: "spring", bounce: 0 },
       fill: { delay: 2, duration: 1, ease: "linear" },
     },
   },
