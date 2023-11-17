@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import { createPathFillIn } from "../utils/animationVariants";
 
-export default function Logo({ logoColor, animated, ...props }) {
+export default function Logo({ logoColor, animated, isInView, ...props }) {
   function getHexColor(logoColor) {
     const colorMap = {
       white: "#fff",
@@ -20,7 +20,7 @@ export default function Logo({ logoColor, animated, ...props }) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
       initial="hidden"
-      animate="visible"
+      animate= {isInView ? "visible" : "hidden"}
       variants={pathFillIn}
     >
       <motion.path
@@ -114,7 +114,7 @@ Logo.propTypes = {
   height: PropTypes.number.isRequired,
   logoColor: PropTypes.string.isRequired,
   animated: PropTypes.bool.isRequired,
-  // isInView: PropTypes.bool.isRequired,
+  isInView: PropTypes.bool,
 };
 
 Logo.defaultProps = {

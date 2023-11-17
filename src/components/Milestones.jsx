@@ -15,15 +15,21 @@ import { motion } from "framer-motion";
 const Milestones = () => {
   const milestonesList = [
     {
-      title: "5",
+      prefix: "+ ",
+      number: 5,
+      postfix: " ",
       description: "Anos De Atividade",
     },
     {
-      title: "+200",
+      prefix: "+ ",
+      number: 200,
+      postfix: " ",
       description: "Clientes Satisfeitos",
     },
     {
-      title: "+R$ 200k",
+      prefix: "+ ",
+      number: 200,
+      postfix: " mil",
       description: "De Investimentos",
     },
   ];
@@ -67,7 +73,10 @@ const Milestones = () => {
                   <ListItemText
                     primary={
                       <Counter
-                        end={parseInt(milestone.title.replace(/\D/g, ""))}
+                        end={milestone.number}
+                        prefix={milestone.prefix}
+                        postfix={milestone.postfix}
+                        isInView={isInView}
                       />
                     }
                     primaryTypographyProps={{
