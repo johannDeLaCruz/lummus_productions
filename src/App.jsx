@@ -1,4 +1,4 @@
-import NavBar from "./components/NavBar.jsx";
+import NavigationBar from "./components/NavigationBar.jsx";
 import HeroSection from "./components/HeroSection.jsx";
 import HeroVideo from "./components/HeroVideo.jsx";
 import AboutUs from "./components/AboutUs.jsx";
@@ -23,7 +23,7 @@ const pages = [
 function App() {
   return (
     <>
-      <NavBar pages={pages} />
+      <NavigationBar pages={pages} />
       <main>
         <HeroSection sectionName={pages[0]} />
         <HeroVideo />
