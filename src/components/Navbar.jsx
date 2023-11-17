@@ -14,7 +14,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import Fade from "@mui/material/Fade";
 import { useState, useEffect } from "react";
-import { Link as ScrollLink, Events, scroller } from "react-scroll";
+import { Link as ScrollLink, Events } from "react-scroll";
 import { PropTypes } from "prop-types";
 
 const NavBar = ({ pages }) => {
@@ -43,23 +43,13 @@ const NavBar = ({ pages }) => {
     };
   }, []);
 
-  const handleScrollTo = (to) => {
-    scroller.scrollTo(to, {
-      duration: 800,
-      smooth: true,
-      offset: -88,
-      // spy: true,
-      activeClass: "active",
-    });
-  };
-
   const handleManualScroll = () => {
     const scrollY = window.scrollY || document.documentElement.scrollTop;
     const sections = pages.map((page) => document.getElementById(page));
 
     for (let i = 0; i < sections.length; i++) {
       const section = sections[i];
-      const sectionTop = section.offsetTop - 88;
+      const sectionTop = section.offsetTop - 200;
       const sectionBottom = sectionTop + section.clientHeight;
 
       if (scrollY >= sectionTop && scrollY < sectionBottom) {
@@ -147,10 +137,6 @@ const NavBar = ({ pages }) => {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={() => {
-                  handleCloseNavMenu();
-                  handleScrollTo(page);
-                }}
                 sx={{
                   my: 2,
                   display: "block",
@@ -160,15 +146,11 @@ const NavBar = ({ pages }) => {
                 variant="text"
                 size="medium"
               >
-                <ScrollLink to={page} smooth={true} duration={800} offset={-88}>
+                <ScrollLink to={page} smooth={true} duration={800} offset={-90}>
                   {page}
                 </ScrollLink>
                 {activeLink === page && (
-                  <Fade
-                    in={true}
-                    appear={true}
-                    timeout={2000}
-                  >
+                  <Fade in={true} appear={true} timeout={2800}>
                     <Box
                       sx={{
                         position: "absolute",

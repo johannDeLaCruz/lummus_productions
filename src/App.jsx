@@ -36,7 +36,7 @@ function App() {
         <CallToAction />
         <ContactUs sectionName={pages[5]} />
       </main>
-      <Footer />
+      <Footer pages={pages} />
     </>
   );
 }

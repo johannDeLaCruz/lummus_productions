@@ -1,3 +1,4 @@
+import { PropTypes } from "prop-types";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
@@ -5,17 +6,9 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import LogoComplete from "./LogoComplete";
 import Button from "@mui/material/Button";
+import { Link as ScrollLink } from "react-scroll";
 
-const footerItems = [
-  "Início",
-  "Sobre",
-  "Depoimentos",
-  "Portfólio",
-  "Contato",
-  "+55(61)98368-8716",
-];
-
-const Footer = () => {
+const Footer = ({ pages }) => {
   return (
     <Box component={"footer"}>
       <Container maxWidth={"xl"}>
@@ -44,9 +37,11 @@ const Footer = () => {
             alignItems={{ xxs: "center", sm: "flex-start" }}
             flexBasis={"content"}
           >
-            {footerItems.map((item, index) => (
+            {pages.map((page, index) => (
               <Grid item xs={12} sm={6} key={index}>
-                <Button variant="text">{item}</Button>
+                <ScrollLink to={page} smooth={true} duration={800} offset={-90}>
+                  <Button variant="text">{page}</Button>
+                </ScrollLink>
               </Grid>
             ))}
           </Grid>
@@ -54,6 +49,10 @@ const Footer = () => {
       </Container>
     </Box>
   );
+};
+
+Footer.propTypes = {
+  pages: PropTypes.array.isRequired,
 };
 
 export default Footer;
