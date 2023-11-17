@@ -1,7 +1,7 @@
 import { PropTypes } from "prop-types";
 import { motion } from "framer-motion";
 import { Stack } from "@mui/material";
-import { verticalPop } from "../utils/animationVariants";
+import { verticalPop } from "../utils/animationVariants.js";
 import { forwardRef } from "react";
 
 const AnimatedStack = forwardRef(({ children, isInView, ...rest }, ref) => {

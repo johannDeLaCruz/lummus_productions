@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
-import AnimatedTypography from "./AnimatedTypography";
-import AnimatedStack from "./AnimatedStack";
+import AnimatedTypography from "./AnimatedTypography.jsx";
+import AnimatedStack from "./AnimatedStack.jsx";
 import Container from "@mui/material/Container";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";

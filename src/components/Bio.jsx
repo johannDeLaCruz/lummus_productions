@@ -4,13 +4,13 @@ import Stack from "@mui/material/Stack";
 import Card from "@mui/material/Card";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import CeoAvatar from "./CeoAvatar";
+import CeoAvatar from "./CeoAvatar.jsx";
 import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import AnimatedStack from "./AnimatedStack";
-import AnimatedTypography from "./AnimatedTypography";
+import AnimatedStack from "./AnimatedStack.jsx";
+import AnimatedTypography from "./AnimatedTypography.jsx";
 
 const Bio = () => {
   const ref = useRef(null);

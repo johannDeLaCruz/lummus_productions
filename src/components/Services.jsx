@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import AnimatedGrid from "./AnimatedGrid";
+import AnimatedGrid from "./AnimatedGrid.jsx";
 import AccessibilityIcon from "@mui/icons-material/Accessibility";
 import Diversity3Icon from "@mui/icons-material/Diversity3";
 import PaletteIcon from "@mui/icons-material/Palette";
@@ -11,14 +11,14 @@ import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
 import Container from "@mui/material/Container";
-import Icon from "./Icon";
-import LampImg from "./LampImg";
+import Icon from "./Icon.jsx";
+import LampImg from "./LampImg.jsx";
 import { PropTypes } from "prop-types";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import AnimatedStack from "./AnimatedStack";
-import AnimatedTypography from "./AnimatedTypography";
-import { horizontalPopChildren } from "../utils/animationVariants";
+import AnimatedStack from "./AnimatedStack.jsx";
+import AnimatedTypography from "./AnimatedTypography.jsx";
+import { horizontalPopChildren } from "../utils/animationVariants.js";
 
 const Services = ({ sectionName }) => {
   const services = [

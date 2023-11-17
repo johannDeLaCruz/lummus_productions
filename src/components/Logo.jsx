@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
-import { createPathFillIn } from "../utils/animationVariants";
+import { createPathFillIn } from "../utils/animationVariants.js";
 
 export default function Logo({ logoColor, animated, isInView, ...props }) {
   function getHexColor(logoColor) {

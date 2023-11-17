@@ -3,12 +3,12 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Container from "@mui/material/Container";
-import Logo from "./Logo";
-import LampImg from "./LampImg";
+import Logo from "./Logo.jsx";
+import LampImg from "./LampImg.jsx";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import AnimatedStack from "./AnimatedStack";
-import { verticalPopChildren } from "../utils/animationVariants";
+import AnimatedStack from "./AnimatedStack.jsx";
+import { verticalPopChildren } from "../utils/animationVariants.js";
 
 const HeroSection = ({ sectionName }) => {
   const ref = useRef(null);

@@ -9,7 +9,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import MenuItem from "@mui/material/MenuItem";
-import Logo from "./Logo";
+import Logo from "./Logo.jsx";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import Fade from "@mui/material/Fade";

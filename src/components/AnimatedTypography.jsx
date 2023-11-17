@@ -1,7 +1,7 @@
 import { PropTypes } from "prop-types";
 // import { motion } from "framer-motion";
 import { Typography } from "@mui/material";
-import { verticalPopChildren } from "../utils/animationVariants";
+import { verticalPopChildren } from "../utils/animationVariants.js";
 
 const CustomTypography = ({ children, ...rest }) => {
 //   const MotionComponent = motion[variant] || motion.div;

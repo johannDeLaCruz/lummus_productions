@@ -10,13 +10,13 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import TelegramIcon from "@mui/icons-material/Telegram";
-import Icon from "./Icon";
-import LampImg from "./LampImg";
+import Icon from "./Icon.jsx";
+import LampImg from "./LampImg.jsx";
 import { PropTypes } from "prop-types";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import AnimatedTypography from "./AnimatedTypography";
-import AnimatedStack from "./AnimatedStack";
+import AnimatedTypography from "./AnimatedTypography.jsx";
+import AnimatedStack from "./AnimatedStack.jsx";
 
 const contactUsIcons = [
   EmailIcon,

@@ -1,8 +1,8 @@
 import { PropTypes } from "prop-types";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
-import AnimatedTypography from "./AnimatedTypography";
-import AnimatedStack from "./AnimatedStack";
+import AnimatedTypography from "./AnimatedTypography.jsx";
+import AnimatedStack from "./AnimatedStack.jsx";
 import Container from "@mui/material/Container";
 import { useRef } from "react";
 import { useInView } from "framer-motion";

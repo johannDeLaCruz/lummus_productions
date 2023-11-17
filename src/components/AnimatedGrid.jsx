@@ -1,7 +1,7 @@
 import { PropTypes } from "prop-types";
 import { motion } from "framer-motion";
 import { Grid } from "@mui/material";
-import { horizontalPop } from "../utils/animationVariants";
+import { horizontalPop } from "../utils/animationVariants.js";
 import { forwardRef } from "react";
 
 const AnimatedGrid = forwardRef(({ children, isInView, ...rest }, ref) => {

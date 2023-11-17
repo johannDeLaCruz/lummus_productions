@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import LogoComplete from "./LogoComplete";
+import LogoComplete from "./LogoComplete.jsx";
 import Button from "@mui/material/Button";
 import { Link as ScrollLink } from "react-scroll";
 

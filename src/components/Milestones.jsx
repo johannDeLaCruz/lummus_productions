@@ -1,13 +1,13 @@
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
-import AnimatedTypography from "./AnimatedTypography";
-import AnimatedStack from "./AnimatedStack";
+import AnimatedTypography from "./AnimatedTypography.jsx";
+import AnimatedStack from "./AnimatedStack.jsx";
 import Container from "@mui/material/Container";
 import List from "@mui/material/List";
 import ListItemText from "@mui/material/ListItemText";
 import ListItem from "@mui/material/ListItem";
-import LampImg from "./LampImg";
-import Counter from "./Counter";
+import LampImg from "./LampImg.jsx";
+import Counter from "./Counter.jsx";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
