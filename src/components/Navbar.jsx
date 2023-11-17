@@ -15,8 +15,12 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import { useState, useEffect } from "react";
 import { Link as ScrollLink, Events, scroller } from "react-scroll";
 import { PropTypes } from "prop-types";
+import {useTheme} from '@mui/material/styles';
 
-function ResponsiveAppBar({ pages }) {
+
+
+function NavBar({ pages }) {
+  const theme = useTheme();
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [activeLink, setActiveLink] = useState(pages[0]);
 
@@ -73,7 +77,7 @@ function ResponsiveAppBar({ pages }) {
     return () => {
       window.removeEventListener("scroll", handleManualScroll);
     };
-  },);
+  });
 
   return (
     <AppBar position="sticky" color="background">
@@ -154,6 +158,7 @@ function ResponsiveAppBar({ pages }) {
                   my: 2,
                   display: "block",
                   color: activeLink === page ? "primary.main" : "inherit",
+                  position: "relative",
                 }}
                 variant="text"
                 size="medium"
@@ -161,6 +166,20 @@ function ResponsiveAppBar({ pages }) {
                 <ScrollLink to={page} smooth={true} duration={800} offset={-88}>
                   {page}
                 </ScrollLink>
+                {activeLink === page && (
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: "-0.25rem",
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      width: "0.5rem",
+                      height: "0.5rem",
+                      borderRadius: "50%",
+                      backgroundColor: theme.palette.primary.main,
+                    }}
+                  />
+                )}
               </Button>
             ))}
           </Box>
@@ -187,8 +206,8 @@ function ResponsiveAppBar({ pages }) {
   );
 }
 
-ResponsiveAppBar.propTypes = {
+NavBar.propTypes = {
   pages: PropTypes.array.isRequired,
 };
 
-export default ResponsiveAppBar;
+export default NavBar;

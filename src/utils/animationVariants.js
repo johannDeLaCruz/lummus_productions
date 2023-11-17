@@ -46,3 +46,21 @@ export const horizontalPopChildren = {
     },
   },
 };
+
+// export const pathFillIn = {
+//   hidden: {
+//     pathLength: 0,
+//     opacity: 0,
+//     fill: "hsla(360, 100%, 100%, 0)",
+//   },
+//   visible: {
+//     pathLength: 1,
+//     opacity: 1,
+//     fill: "hsla(360, 100%, 100%, 1)",
+//     transition: {
+//       pathLength: { type: "spring", duration: 1.5, bounce: 0 },
+//       opacity: { duration: 0.01 },
+//       fill: { duration: 1.5 },
+//     },
+//   },
+// };
