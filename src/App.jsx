@@ -1,6 +1,6 @@
 import NavBar from "./components/NavBar";
 import HeroSection from "./components/HeroSection";
-// import HeroVideo from "./components/HeroVideo";
+import HeroVideo from "./components/HeroVideo";
 import AboutUs from "./components/AboutUs";
 import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
@@ -26,7 +26,7 @@ function App() {
       <NavBar pages={pages} />
       <main>
         <HeroSection sectionName={pages[0]} />
-        {/* <HeroVideo /> */}
+        <HeroVideo />
         <AboutUs sectionName={pages[1]} />
         <Services sectionName={pages[2]} />
         <Portfolio sectionName={pages[3]} />
