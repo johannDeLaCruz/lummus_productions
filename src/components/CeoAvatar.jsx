@@ -4,7 +4,7 @@ const CeoAvatar = () => {
   return (
     <Avatar
       alt="ceo_photo"
-      src="/src/assets/ceo_avatar.png"
+      src="../assets/images/ceo_avatar.png"
       sx={{ width: "7.5rem", height: "7.5rem" }}
     ></Avatar>
   );
