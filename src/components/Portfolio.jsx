@@ -10,10 +10,29 @@ import AnimatedTypography from "./AnimatedTypography";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 const Portfolio = ({ sectionName }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.4 });
+
+  useEffect(() => {
+    // Function to remove "captioned/" from Instagram iframe src
+    const removeCaptioned = () => {
+      const instagramFrames = document.querySelectorAll("iframe");
+
+      instagramFrames.forEach((frame) => {
+        const currentSrc = frame.getAttribute("src");
+        const newSrc = currentSrc.replace("/captioned/", "/");
+        frame.setAttribute("src", newSrc);
+      });
+    };
+
+    // Call the function after everything is rendered
+
+    removeCaptioned();
+  }, []);
+
   return (
     <Box
       component={"section"}
@@ -45,17 +64,14 @@ const Portfolio = ({ sectionName }) => {
           <InstagramEmbed
             url="https://www.instagram.com/p/CyJiBYtPcC3/"
             width={328}
-            captioned="false"
           />
           <InstagramEmbed
             url="https://www.instagram.com/p/CyJiBYtPcC3/"
             width={328}
-            captioned="false"
           />
           <InstagramEmbed
             url="https://www.instagram.com/reel/CyJiBYtPcC3/"
             width={328}
-            captioned="false"
           />
         </Stack>
       </Container>
