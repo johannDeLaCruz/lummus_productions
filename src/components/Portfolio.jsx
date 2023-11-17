@@ -2,7 +2,6 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
-import { InstagramEmbed } from "react-social-media-embed";
 import LampImg from "./LampImg.jsx";
 import { PropTypes } from "prop-types";
 import AnimatedStack from "./AnimatedStack.jsx";
@@ -10,28 +9,12 @@ import AnimatedTypography from "./AnimatedTypography.jsx";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 
 const Portfolio = ({ sectionName }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.4 });
 
-  useEffect(() => {
-    // Function to remove "captioned/" from Instagram iframe src
-    const removeCaptioned = () => {
-      const instagramFrames = document.querySelectorAll("iframe");
 
-      instagramFrames.forEach((frame) => {
-        const currentSrc = frame.getAttribute("src");
-        const newSrc = currentSrc.replace("/captioned/", "/");
-        frame.setAttribute("src", newSrc);
-      });
-    };
-
-    // Call the function after everything is rendered
-
-    removeCaptioned();
-  }, []);
 
   return (
     <Box
@@ -61,7 +44,7 @@ const Portfolio = ({ sectionName }) => {
         </Stack>
 
         <Stack direction={"row"} spacing={3} py={6} justifyContent={"center"}>
-          <InstagramEmbed
+          {/* <InstagramEmbed
             url="https://www.instagram.com/p/CyJiBYtPcC3/"
             width={328}
           />
@@ -72,7 +55,7 @@ const Portfolio = ({ sectionName }) => {
           <InstagramEmbed
             url="https://www.instagram.com/reel/CyJiBYtPcC3/"
             width={328}
-          />
+          /> */}
         </Stack>
       </Container>
     </Box>
