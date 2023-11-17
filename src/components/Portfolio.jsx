@@ -3,6 +3,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import LampImg from "./LampImg.jsx";
+import Carousel from "./Carousel.jsx";
 import { PropTypes } from "prop-types";
 import AnimatedStack from "./AnimatedStack.jsx";
 import AnimatedTypography from "./AnimatedTypography.jsx";
@@ -13,8 +14,6 @@ import { motion } from "framer-motion";
 const Portfolio = ({ sectionName }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.4 });
-
-
 
   return (
     <Box
@@ -43,19 +42,8 @@ const Portfolio = ({ sectionName }) => {
           </AnimatedStack>
         </Stack>
 
-        <Stack direction={"row"} spacing={3} py={6} justifyContent={"center"}>
-          {/* <InstagramEmbed
-            url="https://www.instagram.com/p/CyJiBYtPcC3/"
-            width={328}
-          />
-          <InstagramEmbed
-            url="https://www.instagram.com/p/CyJiBYtPcC3/"
-            width={328}
-          />
-          <InstagramEmbed
-            url="https://www.instagram.com/reel/CyJiBYtPcC3/"
-            width={328}
-          /> */}
+        <Stack direction={"row"} py={8} justifyContent={"center"}>
+          <Carousel />
         </Stack>
       </Container>
     </Box>
