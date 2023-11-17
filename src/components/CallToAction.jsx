@@ -11,9 +11,9 @@ function CallToAction() {
 
   return (
     <Box
-      py={6}
-      pt={{ md: 24 }}
-      pb={{ md: 8 }}
+      py={8}
+      pt={{ md: 28 }}
+      pb={{ md: 9 }}
       component={"section"}
       sx={{ backgroundColor: "background.main", position: "relative" }}
       zIndex={1}

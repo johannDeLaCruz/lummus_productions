@@ -18,8 +18,8 @@ export default function LampImg({ height, color, isInView }) {
         component={motion.div}
         zIndex={0}
         position={"absolute"}
-        initial={{ y: -280 }}
-        animate={isInView ? { y: -20 } : { y: -280 }}
+        initial={{ y: -230 }}
+        animate={isInView ? { y: -20 } : { y: -230 }}
         transition={{ delay: 0.5, type: "spring", bounce: 0.5 }}
       >
         <img src={src} alt="lamp_img" height={height} />

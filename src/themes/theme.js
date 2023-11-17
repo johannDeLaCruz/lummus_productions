@@ -19,7 +19,7 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: "'Bree Serif', serif;",
-    fontSize: 16,
+    // fontSize: 16,
     h1: {
       fontFamily: "'Hagrid'",
       fontSize: "3.75rem",
