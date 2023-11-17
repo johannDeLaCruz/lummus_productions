@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import { motion } from "framer-motion";
 
 export default function LampImg({ height, color, isInView }) {
-  const src = `/src/assets/images/lamp_original_${color}.png`;
+  const src = `./images/lamp_original_${color}.png`;
 
   return (
     <Box

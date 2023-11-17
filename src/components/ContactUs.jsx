@@ -87,7 +87,7 @@ const ContactUs = ({ sectionName }) => {
             <CardMedia
               component="img"
               alt="contact-us-image"
-              image="/src/assets/contact_us_img.png"
+              image="./images/contact_us_img.png"
               sx={{
                 maxWidth: { xxs: "34rem", md: "50%" },
                 pb: { xs: 0, sm: 4, md: 0 },

@@ -44,7 +44,7 @@ const AboutUs = ({ sectionName }) => {
           </AnimatedStack>
 
           <img
-            src="/src/assets/images/about_us_img.png"
+            src="./images/about_us_img.png"
             alt="about-us-img"
             style={{ maxWidth: "100%" }}
           />
