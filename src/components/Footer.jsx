@@ -44,6 +44,9 @@ const Footer = ({ pages }) => {
                 </ScrollLink>
               </Grid>
             ))}
+            <Grid item xs={12} sm={6}>
+              <Button variant="text">+55 (61) 9 8379-9615</Button>
+            </Grid>
           </Grid>
         </Stack>
       </Container>
