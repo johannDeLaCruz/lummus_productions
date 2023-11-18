@@ -28,7 +28,7 @@ const HeroSection = ({ sectionName }) => {
         backgroundColor: "primary.main",
         color: "primary.contrastText",
       }}
-      pb={12}
+      pb={6}
       id={sectionName}
     >
       <Container maxWidth={"xl"}>

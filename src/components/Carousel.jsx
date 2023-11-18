@@ -3,11 +3,11 @@ import InstagramEmbed from "./InstagramEmbed.jsx";
 
 const instagramLinks = [
   "https://www.instagram.com/reel/CyJiBYtPcC3/",
-  "https://www.instagram.com/reel/CyJiBYtPcC3/",
-  "https://www.instagram.com/reel/CyJiBYtPcC3/",
-  "https://www.instagram.com/reel/CyJiBYtPcC3/",
-  "https://www.instagram.com/reel/CyJiBYtPcC3/",
-  "https://www.instagram.com/reel/CyJiBYtPcC3/",
+  "https://www.instagram.com/reel/CzoX1tPsKvR/",
+  "https://www.instagram.com/reel/CzKDESvPc3z/",
+  "https://www.instagram.com/reel/Cw3l2kZsQi3/",
+  "https://www.instagram.com/reel/CvH5dbHNE36/",
+  "https://www.instagram.com/reel/CvVyQSdNoF-/",
 ];
 
 const Carousel = () => {
