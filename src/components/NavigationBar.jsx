@@ -128,6 +128,7 @@ const NavBar = ({ pages }) => {
             </Menu>
           </Box>
           <Logo height={60} logoColor="purple" />
+          <Box display={{ xxs: "block", sm: "none" }} width={48} height={48} />
           <Box
             sx={{
               display: { xxs: "none", md: "flex", gap: "1.5rem", flexGrow: 1 },

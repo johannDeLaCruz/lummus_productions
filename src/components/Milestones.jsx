@@ -44,7 +44,7 @@ const Milestones = () => {
       pb={12}
     >
       <Container maxWidth={"xl"}>
-        <Stack spacing={0} alignItems={{ xxs: "center", md: "start" }} px={12}>
+        <Stack spacing={0} alignItems={"center"} px={12}>
           <LampImg isInView={isInView} />
           <AnimatedStack
             spacing={4}
