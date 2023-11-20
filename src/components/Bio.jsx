@@ -27,7 +27,7 @@ const Bio = () => {
           direction={{ xxs: "column", md: "row" }}
           alignItems={"center"}
           justifyContent={"space-between"}
-          spacing={6}
+          spacing={{ xxs: 12, md: 6 }}
           px={{ md: 4, lg: 12 }}
           py={12}
           ref={ref}

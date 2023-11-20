@@ -70,7 +70,7 @@ const Testimonials = ({ sectionName }) => {
         <AnimatedStack
           direction={{ xxs: "column", md: "row" }}
           spacing={6}
-          py={{ xxs: 8, md: 2 }}
+          py={{ xxs: 6, md: 0 }}
           justifyContent={"center"}
           alignItems={"center"}
           isInView={isInView}

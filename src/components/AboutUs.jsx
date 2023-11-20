@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 
 const AboutUs = ({ sectionName }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.7 });
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
 
   return (
     <Box
@@ -25,7 +25,7 @@ const AboutUs = ({ sectionName }) => {
           justifyContent={"space-evenly"}
           spacing={5}
           alignItems={"center"}
-          pt={8}
+          pt={{ xxs: 6, md: 0 }}
         >
           <AnimatedStack isInView={isInView} spacing={3} ref={ref}>
             <AnimatedTypography variant="h2" component={motion.h2}>

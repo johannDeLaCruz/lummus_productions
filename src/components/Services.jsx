@@ -88,7 +88,7 @@ const Services = ({ sectionName }) => {
           container
           spacing={4}
           justifyContent={"center"}
-          sx={{ px: { xxs: 0, xs: "10%", sm: 0, md: 8, lg: 0 } }}
+          px={{ xxs: 1, xs: 2, md: 8, lg: 0 }}
           isInView={isInView}
           ref={ref}
         >
@@ -130,8 +130,8 @@ const Services = ({ sectionName }) => {
                   <Typography
                     variant="body2"
                     align="center"
-                    height={"9ch"}
-                    width={"15ch"}
+                    minHeight={"9ch"}
+                    maxWidth={"20ch"}
                   >
                     {service.description}
                   </Typography>
