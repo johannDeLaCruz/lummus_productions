@@ -16,7 +16,6 @@ const Carousel = () => {
       autoplay
       autoplaySpeed={6}
       speed={5}
-      onReady={() => console.log("I am ready")}
       margin={32}
       smartSpeed={true}
     >
