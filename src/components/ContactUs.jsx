@@ -8,7 +8,7 @@ import IconButton from "@mui/material/IconButton";
 import EmailIcon from "@mui/icons-material/Email";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import TwitterIcon from "@mui/icons-material/Twitter";
+// import TwitterIcon from "@mui/icons-material/Twitter";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import Icon from "./Icon.jsx";
 import LampImg from "./LampImg.jsx";
@@ -22,7 +22,7 @@ const contactUsIcons = [
   EmailIcon,
   WhatsAppIcon,
   InstagramIcon,
-  TwitterIcon,
+  // TwitterIcon,
   TelegramIcon,
 ];
 
@@ -55,7 +55,7 @@ const ContactUs = ({ sectionName }) => {
           >
             <CardContent sx={{ py: 6, px: { xxs: 2, sm: 6 } }}>
               <AnimatedStack
-                spacing={4}
+                spacing={3}
                 textAlign={{ xxs: "center", md: "start" }}
                 ref={ref}
                 isInView={isInView}
@@ -72,7 +72,7 @@ const ContactUs = ({ sectionName }) => {
                 </AnimatedTypography>
                 <Stack
                   direction={"row"}
-                  spacing={1}
+                  // spacing={1}
                   justifyContent={{ xxs: "center", md: "start" }}
                   flexWrap={"wrap"}
                 >

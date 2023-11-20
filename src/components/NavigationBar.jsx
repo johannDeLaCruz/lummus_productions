@@ -112,7 +112,7 @@ const NavBar = ({ pages }) => {
                     to={page}
                     smooth={true}
                     duration={800}
-                    offset={-90}
+                    offset={-80}
                   >
                     <Typography
                       textAlign="center"
@@ -148,7 +148,7 @@ const NavBar = ({ pages }) => {
                 variant="text"
                 size="medium"
               >
-                <ScrollLink to={page} smooth={true} duration={800} offset={-90}>
+                <ScrollLink to={page} smooth={true} duration={800} offset={-80}>
                   {page}
                 </ScrollLink>
                 {activeLink === page && (
