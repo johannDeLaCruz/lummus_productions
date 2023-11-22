@@ -33,6 +33,7 @@ const VideoPlayer = () => {
           style={{
             lineHeight: 0,
             border: isMobile ? "none" : "white 1rem solid",
+            boxShadow: isMobile ? "none" : "0 0 10px black",
           }}
         />
       </Box>

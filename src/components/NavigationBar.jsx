@@ -106,8 +106,8 @@ const NavBar = ({ pages }) => {
                 display: { xxs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+              {pages.map((page, index) => (
+                <MenuItem key={index} onClick={handleCloseNavMenu}>
                   <ScrollLink
                     to={page}
                     smooth={true}
@@ -136,9 +136,9 @@ const NavBar = ({ pages }) => {
             px={6}
             component={"nav"}
           >
-            {pages.map((page) => (
+            {pages.map((page, index) => (
               <Button
-                key={page}
+                key={index}
                 sx={{
                   my: 2,
                   display: "block",
@@ -179,10 +179,13 @@ const NavBar = ({ pages }) => {
           >
             {" "}
             <Paper sx={{ paddingInline: 1 }}>
-              <IconButton color="primary">
+              <IconButton color="primary" href="https://alvo.chat/37RG">
                 <WhatsAppIcon fontSize="large" />
               </IconButton>
-              <IconButton color="primary">
+              <IconButton
+                color="primary"
+                href="https://www.instagram.com/lummuspublicidade"
+              >
                 <InstagramIcon fontSize="large" />
               </IconButton>
             </Paper>
@@ -192,6 +195,8 @@ const NavBar = ({ pages }) => {
     </AppBar>
   );
 };
+
+//https://wa.me/5561981666467
 
 NavBar.propTypes = {
   pages: PropTypes.array.isRequired,
